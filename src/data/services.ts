@@ -39,7 +39,7 @@ export const servicesData: ServiceItem[] = [
       "Fast, friction-free lead capture forms",
       "Optimized for Instagram & ad traffic",
       "Instant WhatsApp chat callouts",
-      "Sub-second load times",
+      "Fast, lightweight load times",
     ],
     idealFor: "Campaign launches, real estate showcases, event tickets, and promotional offers.",
   },

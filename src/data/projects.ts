@@ -61,7 +61,7 @@ export const featuredProjects: Project[] = [
     highlights: [
       { label: "Focus", value: "Direct Bookings" },
       { label: "Channel", value: "WhatsApp Funnel" },
-      { label: "Performance", value: "< 1s Speed" },
+      { label: "Performance", value: "Fast & Fluid" },
     ],
   },
   {

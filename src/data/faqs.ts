@@ -32,7 +32,7 @@ export const faqsData: FAQItem[] = [
     category: "Design",
     question: "Will my website work smoothly on mobile phones?",
     answer:
-      "Yes, 100%. Over 70% of web visitors browse on mobile devices, which is why we build all websites mobile-first. We rigorously test across compact smartphones, standard mobile screens, tablets, laptops, and ultra-wide desktop monitors to ensure flawless layout, fast touch interactions, and zero horizontal scrolling.",
+      "Yes, absolutely. Most web visitors browse on mobile devices, which is why we design and build all websites mobile-first. We rigorously test across compact smartphones, standard mobile screens, tablets, laptops, and desktop monitors to ensure clean layouts, fast touch interactions, and zero horizontal scrolling.",
   },
   {
     id: "ecommerce-store",

@@ -12,26 +12,26 @@ export const whyUsPillars: WhyUsPillar[] = [
     id: "mobile-first",
     iconName: "Smartphone",
     title: "Mobile First",
-    subtitle: "Designed for phone screens first",
+    subtitle: "Built for modern browsing habits",
     description:
-      "Over 75% of your customers will visit your website from Instagram, links in bios, or mobile searches. We design every page to feel as smooth as a native mobile app.",
+      "We design websites around the way customers actually browse — starting with mobile and scaling beautifully to larger screens.",
     keyPoints: [
-      "Zero horizontal scrolling or overflow",
+      "Zero horizontal scrolling or layout shifts",
       "Large, finger-friendly touch targets",
-      "Fast, fluid gestures and navigation",
+      "Fast, fluid gestures and intuitive navigation",
     ],
   },
   {
-    id: "fast-and-modern",
+    id: "optimized-for-speed",
     iconName: "Zap",
-    title: "Fast & Modern",
-    subtitle: "Speed that keeps visitors engaged",
+    title: "Optimized for Speed",
+    subtitle: "Lightweight, performance-focused builds",
     description:
-      "A 2-second delay in page load can lose more than 50% of your visitors. We engineer ultra-fast websites using modern Next.js and optimized assets that load in a blink.",
+      "We build lightweight, performance-focused websites designed to load quickly and reliably across modern devices and connections.",
     keyPoints: [
-      "Sub-second initial page render",
-      "Automatic image and asset compression",
-      "High Google Core Web Vitals score",
+      "Fast, lightweight initial page render",
+      "Modern asset compression & clean code",
+      "Smooth, responsive user experience",
     ],
   },
   {
