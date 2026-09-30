@@ -57,8 +57,8 @@ export function Navbar() {
               <span className="font-bold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-tight">
                 TechBuddy<span className="text-indigo-600 dark:text-sky-400">Studio</span>
               </span>
-              <span className="text-[10px] uppercase font-semibold tracking-widest text-slate-500 dark:text-slate-400 text-center">
-                Development Studio
+              <span className="text-[10px] uppercase font-semibold tracking-wider text-slate-500 dark:text-slate-400">
+                Web &amp; Digital Solutions
               </span>
             </div>
           </Link>

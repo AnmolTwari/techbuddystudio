@@ -14,7 +14,7 @@ export function FinalCTA() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/20 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Transform Your Business Online</span>
+          <span>Ready to Grow Your Business?</span>
         </div>
 
         <div className="space-y-4 max-w-3xl mx-auto">

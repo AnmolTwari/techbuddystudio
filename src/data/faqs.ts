@@ -39,7 +39,7 @@ export const faqsData: FAQItem[] = [
     category: "Services",
     question: "Can you build an online store?",
     answer:
-      "Yes. We build clean, high-performing e-commerce websites with intuitive product showcases, category filtering, cart & checkout workflows, and secure payment integration. We also create lightweight catalogs with direct WhatsApp checkout for boutique businesses.",
+      "Yes. We build clean, high-performing e-commerce websites with intuitive product showcases, category filtering, cart & checkout workflows, and secure payment integration. We also create lightweight catalogs with direct WhatsApp checkout for retail and consumer brands.",
   },
   {
     id: "custom-web-apps",

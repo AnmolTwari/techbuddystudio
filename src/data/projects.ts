@@ -36,9 +36,9 @@ export const featuredProjects: Project[] = [
     id: "directstay",
     title: "DirectStay",
     category: "Hospitality / Hotel Website",
-    tagline: "Direct-Booking & Guest Experience Platform for Boutique Hotels",
+    tagline: "Direct-Booking & Guest Experience Platform for Luxury Hotels & Resorts",
     description:
-      "A modern direct-booking platform designed for boutique hotels, luxury resorts, and hospitality businesses to drive commission-free direct bookings and streamline guest communications.",
+      "A modern direct-booking platform designed for hotels, luxury resorts, and hospitality businesses to drive commission-free direct bookings and streamline guest communications.",
     isFeatured: true,
     featuredRank: 1,
     features: [

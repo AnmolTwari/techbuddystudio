@@ -74,7 +74,7 @@ export const servicesData: ServiceItem[] = [
       "Mobile shopping optimization",
       "WhatsApp order enquiry capability",
     ],
-    idealFor: "Boutiques, retail stores, artisan brands, merchandise sellers, and direct-to-consumer businesses.",
+    idealFor: "Retail stores, modern brands, merchandise sellers, and direct-to-consumer businesses.",
   },
   {
     id: "custom-web-apps",

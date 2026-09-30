@@ -108,7 +108,7 @@ export function InteractiveBrowserMockup() {
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">
-                        Luxury Boutique Resort
+                        Premier Luxury Resort
                       </span>
                       <div className="flex text-amber-500">
                         {[...Array(5)].map((_, i) => (
@@ -384,7 +384,7 @@ export function InteractiveBrowserMockup() {
             <span className="hidden sm:inline">•</span>
             <span className="hidden sm:inline">Mobile-First Layout</span>
           </div>
-          <span>TechBuddyStudio Engineered</span>
+          <span>Engineered by TechBuddyStudio</span>
         </div>
       </div>
 

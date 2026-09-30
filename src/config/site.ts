@@ -69,16 +69,16 @@ export const siteConfig = {
   ],
   keywords: [
     "TechBuddyStudio",
-    "web development studio",
+    "professional web development",
     "business website design",
     "custom web development",
     "Next.js web development",
-    "boutique web agency",
+    "full-stack web development",
     "mobile friendly websites",
     "hospitality website development",
     "e-commerce websites",
     "Anmol Tiwari",
-    "landing page design",
+    "high performance web applications",
   ],
 };
 

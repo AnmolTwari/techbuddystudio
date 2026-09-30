@@ -59,9 +59,9 @@ export function AboutSection() {
                   </div>
                 </div>
 
-                {/* Studio Philosophy Pill */}
+                {/* Philosophy Pill */}
                 <div className="text-[11px] text-slate-500 dark:text-slate-400 italic">
-                  &ldquo;Building digital experiences with craftsmanship, performance, and practical business utility.&rdquo;
+                  &ldquo;Engineering high-performance web platforms with clean code, fast load times, and practical business utility.&rdquo;
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@ export function AboutSection() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/20 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>The Person Behind TechBuddyStudio</span>
+              <span>About TechBuddyStudio</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -83,7 +83,7 @@ export function AboutSection() {
                 Hi, I&apos;m <strong className="text-slate-900 dark:text-white font-semibold">Anmol</strong> — the founder of TechBuddyStudio.
               </p>
               <p>
-                I build modern web experiences with a focus on clean design, fast performance, and practical business functionality. Whether you run a boutique hotel, a retail business, an adventure travel company, or a growing brand, my goal is to make your business look world-class and effortless for customers to connect with.
+                I build modern web experiences with a focus on clean design, fast performance, and practical business functionality. Whether you run a hotel or resort, a retail business, a travel agency, or a growing company, my goal is to make your business look world-class and effortless for customers to connect with.
               </p>
               <p>
                 My background includes full-stack engineering, building production web applications, business platforms, and digital experiences across modern frontend ecosystems and enterprise backend systems.

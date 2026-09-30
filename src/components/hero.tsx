@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 import { InteractiveBrowserMockup } from "@/components/interactive-browser-mockup";
 import { 
   ArrowRight, 
-  Sparkles, 
+  Code2, 
   ShieldCheck, 
   Zap, 
   Smartphone, 
@@ -26,15 +26,15 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Hero Header */}
         <div className="text-center max-w-4xl mx-auto space-y-6">
-          {/* Studio Tagline Badge */}
+          {/* Professional Status Badge */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-500/20 bg-indigo-50/80 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 text-xs sm:text-sm font-semibold shadow-xs"
+            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-slate-300/80 dark:border-slate-700/80 bg-white/80 dark:bg-slate-900/80 text-slate-800 dark:text-slate-200 text-xs sm:text-sm font-semibold shadow-xs backdrop-blur-sm"
           >
-            <Sparkles className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
-            <span>Boutique Web Development Studio</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Modern Web Development &amp; Engineering</span>
           </motion.div>
 
           {/* Primary Headline */}

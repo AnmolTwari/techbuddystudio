@@ -10,7 +10,7 @@ export function TestimonialsPlaceholder() {
         <div className="rounded-3xl bg-gradient-to-br from-indigo-50 via-slate-50 to-violet-50 dark:from-indigo-950/40 dark:via-slate-900/40 dark:to-violet-950/40 border border-indigo-200 dark:border-indigo-500/20 p-8 sm:p-12 text-center max-w-4xl mx-auto space-y-6 shadow-sm">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-500/30 bg-white dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 text-xs font-bold">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Studio Quality Standard</span>
+            <span>Our Quality Commitment</span>
           </div>
 
           <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
