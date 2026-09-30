@@ -5,11 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { useTheme } from "@/components/theme-provider";
-import { 
-  Sun, 
-  Moon, 
-  Menu, 
-  X, 
+import {
+  Sun,
+  Moon,
+  Menu,
+  X,
   ArrowRight
 } from "lucide-react";
 
@@ -30,11 +30,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/80 dark:bg-[#080b11]/85 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 shadow-sm"
-          : "bg-transparent border-b border-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-white/80 dark:bg-[#080b11]/85 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 shadow-sm"
+        : "bg-transparent border-b border-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
@@ -58,8 +57,8 @@ export function Navbar() {
               <span className="font-bold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-tight">
                 TechBuddy<span className="text-indigo-600 dark:text-sky-400">Studio</span>
               </span>
-              <span className="text-[10px] uppercase font-semibold tracking-widest text-slate-500 dark:text-slate-400">
-                Web Development Studio
+              <span className="text-[10px] uppercase font-semibold tracking-widest text-slate-500 dark:text-slate-400 text-center">
+                Development Studio
               </span>
             </div>
           </Link>
