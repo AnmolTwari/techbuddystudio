@@ -9,10 +9,10 @@ export function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end">
       {/* Quick chat popup box when opened */}
       {isOpen && (
-        <div className="mb-3 w-80 rounded-2xl bg-white dark:bg-[#0e1424] border border-slate-200 dark:border-slate-800 shadow-2xl p-4 text-left animate-in slide-in-from-bottom-2 duration-200">
+        <div className="mb-3 w-[calc(100vw-2rem)] sm:w-80 max-w-sm rounded-2xl bg-white dark:bg-[#0e1424] border border-slate-200 dark:border-slate-800 shadow-2xl p-4 text-left animate-in slide-in-from-bottom-2 duration-200">
           <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
             <div className="flex items-center gap-2.5">
               <div className="relative w-8 h-8 rounded-full overflow-hidden border border-slate-700 bg-black flex-shrink-0">
