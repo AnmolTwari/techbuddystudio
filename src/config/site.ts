@@ -6,7 +6,7 @@
  */
 
 // Central domain configuration (can be configured via environment variable)
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://techbuddystudio.vercel.app";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://techbuddystudio.com";
 
 export const siteConfig = {
   name: "TechBuddyStudio",
@@ -19,7 +19,7 @@ export const siteConfig = {
     name: "Anmol Tiwari",
     role: "Founder & Full Stack Developer",
     location: "India",
-    experienceHighlight: "Java Full Stack Development Intern — Mphasis",
+    experienceHighlight: "Java Full Stack Development Intern at Mphasis",
     portfolioUrl: "https://iamanmol.vercel.app/",
     githubUrl: "https://github.com/AnmolTwari",
     linkedinUrl: "https://linkedin.com/in/openit",

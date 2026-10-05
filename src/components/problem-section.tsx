@@ -21,30 +21,30 @@ export function ProblemSection() {
       case "Instagram":
         return <InstagramIcon className="w-5 h-5 text-amber-600 dark:text-amber-500" />;
       case "PhoneOff":
-        return <PhoneOff className="w-5 h-5 text-indigo-600 dark:text-indigo-500" />;
+        return <PhoneOff className="w-5 h-5 text-[#2f27ce] dark:text-[#443dff]" />;
       case "AlertTriangle":
         return <AlertTriangle className="w-5 h-5 text-orange-600 dark:text-orange-500" />;
       case "Smartphone":
         return <Smartphone className="w-5 h-5 text-sky-600 dark:text-sky-500" />;
       default:
-        return <AlertTriangle className="w-5 h-5 text-indigo-600 dark:text-indigo-500" />;
+        return <AlertTriangle className="w-5 h-5 text-[#2f27ce] dark:text-[#443dff]" />;
     }
   };
 
   return (
-    <section className="py-20 sm:py-28 bg-slate-50 dark:bg-[#070a10] relative">
+    <section className="py-20 sm:py-28 bg-[#f0effe]/50 dark:bg-[#050316] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-rose-200 dark:border-rose-500/20 bg-rose-50 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400 text-xs font-bold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md border border-[#dddbff] dark:border-[#221a5a] bg-[#dddbff]/50 dark:bg-[#19134a] text-[#2f27ce] dark:text-[#dddbff] text-xs font-bold">
             <span>Why A Professional Website Matters</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#050316] dark:text-white tracking-tight">
             Is your business losing opportunities online?
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300">
+          <p className="text-base sm:text-lg text-[#484469] dark:text-[#a39fd4]">
             Most businesses offer great real-world services, but their online presence fails to reflect their quality, making it hard for prospective clients to take action.
           </p>
         </div>
@@ -54,28 +54,28 @@ export function ProblemSection() {
           {problemCards.map((card, index) => (
             <div
               key={card.id}
-              className={`p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#0d1322] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between ${
+              className={`p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#0c0827] border border-[#dddbff] dark:border-[#221a5a] shadow-sm hover:shadow-md hover:border-[#443dff]/50 transition-all duration-300 flex flex-col justify-between ${
                 index === 4 ? "md:col-span-2 lg:col-span-1" : ""
               }`}
             >
               <div className="space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800/80 flex items-center justify-center border border-slate-200 dark:border-slate-700/60">
+                <div className="w-12 h-12 rounded-xl bg-[#f0effe] dark:bg-[#120e36] flex items-center justify-center border border-[#dddbff] dark:border-[#221a5a]">
                   {getIcon(card.iconName)}
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                <h3 className="text-lg font-bold text-[#050316] dark:text-white">
                   {card.title}
                 </h3>
 
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+                <p className="text-sm text-[#484469] dark:text-[#a39fd4] leading-relaxed font-normal">
                   {card.painPoint}
                 </p>
               </div>
 
               {/* Solution Pill */}
-              <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-0.5" />
-                <span className="text-xs font-semibold text-slate-800 dark:text-slate-300">
+              <div className="mt-6 pt-4 border-t border-[#dddbff]/60 dark:border-[#221a5a] flex items-start gap-2.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                <span className="text-xs font-semibold text-[#050316] dark:text-[#dddbff]">
                   {card.solution}
                 </span>
               </div>
@@ -84,21 +84,21 @@ export function ProblemSection() {
         </div>
 
         {/* Closing Transformation Banner */}
-        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-indigo-900 via-slate-900 to-violet-950 border border-indigo-500/30 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-[#2f27ce] dark:bg-[#120e36] border border-[#2f27ce] dark:border-[#221a5a] text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
-            <span className="text-xs font-bold uppercase tracking-widest text-indigo-400">
-              The TechBuddyStudio Solution
+            <span className="text-xs font-bold uppercase tracking-widest text-[#dddbff]">
+              The TechBuddyStudio Approach
             </span>
             <p className="text-lg sm:text-xl font-bold text-white max-w-2xl leading-snug">
-              TechBuddyStudio helps turn your online presence into a professional customer experience.
+              We turn your online presence into a clean, credible, and high-converting asset for your business.
             </p>
           </div>
 
           <Link
             href="#services"
-            className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white transition-all shadow-md"
+            className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 text-sm font-bold rounded-lg bg-white text-[#2f27ce] dark:bg-[#0c0827] dark:text-[#dddbff] hover:bg-[#fbfbfe] dark:hover:bg-[#19134a] transition-all shadow-xs cursor-pointer"
           >
-            <span>Explore Our Services</span>
+            <span>Explore Services</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

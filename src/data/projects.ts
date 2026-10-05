@@ -125,10 +125,10 @@ export const featuredProjects: Project[] = [
     liveUrl: "https://managemyshop.vercel.app/",
     statusBadge: "Live Business Software",
     themeColor: {
-      accent: "#8b5cf6", // Indigo / violet modern enterprise
-      lightBg: "from-violet-500/10 via-indigo-500/5 to-transparent",
-      darkBg: "from-violet-950/40 via-indigo-900/20 to-transparent",
-      badgeBorder: "border-violet-500/30 text-violet-400 bg-violet-500/10",
+      accent: "#443dff", // Studio signature accent
+      lightBg: "from-[#443dff]/10 via-[#2f27ce]/5 to-transparent",
+      darkBg: "from-[#2f27ce]/30 via-[#0c0827]/20 to-transparent",
+      badgeBorder: "border-[#443dff]/30 text-[#443dff] bg-[#443dff]/10",
     },
     highlights: [
       { label: "Architecture", value: "Full Stack" },

@@ -20,9 +20,6 @@ export function Hero() {
       id="home"
       className="relative pt-28 sm:pt-36 pb-20 sm:pb-28 overflow-hidden studio-grid-pattern"
     >
-      {/* Ambient background glow highlights */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-tr from-indigo-500/20 via-violet-500/15 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Hero Header */}
         <div className="text-center max-w-4xl mx-auto space-y-6">
@@ -31,10 +28,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-slate-300/80 dark:border-slate-700/80 bg-white/80 dark:bg-slate-900/80 text-slate-800 dark:text-slate-200 text-xs sm:text-sm font-semibold shadow-xs backdrop-blur-sm"
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-md border border-[#dddbff] dark:border-[#221a5a] bg-white dark:bg-[#0c0827] text-[#050316] dark:text-[#dddbff] text-xs sm:text-sm font-semibold shadow-xs"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Modern Web Development &amp; Engineering</span>
+            <span>Custom Web Development &amp; Digital Engineering</span>
           </motion.div>
 
           {/* Primary Headline */}
@@ -42,11 +39,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] sm:leading-[1.12]"
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#050316] dark:text-white leading-[1.15] sm:leading-[1.12]"
           >
-            Your business deserves a website that{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-indigo-600 to-violet-600 dark:from-indigo-400 dark:via-sky-400 dark:to-violet-400">
-              works as hard as you do.
+            Bespoke Websites &amp; Web Applications for{" "}
+            <span className="text-[#2f27ce] dark:text-[#443dff]">
+              Growing Businesses.
             </span>
           </motion.h1>
 
@@ -55,9 +52,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal"
+            className="text-base sm:text-lg md:text-xl text-[#050316]/85 dark:text-[#dddbff]/90 max-w-3xl mx-auto leading-relaxed font-normal"
           >
-            We design and build modern, fast, mobile-friendly websites and web experiences that help businesses build credibility, showcase their services, and make it easier for customers to connect.
+            We design and build fast, responsive, and conversion-focused websites that showcase your business with credibility and make it effortless for customers to connect with you.
           </motion.p>
 
           {/* Action CTAs */}
@@ -69,7 +66,7 @@ export function Hero() {
           >
             <Link
               href="#contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-base font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/45 hover:-translate-y-0.5 transition-all duration-200"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-base font-bold rounded-lg bg-[#2f27ce] hover:bg-[#251ea8] dark:bg-[#443dff] dark:hover:bg-[#342de6] text-white shadow-md shadow-[#2f27ce]/20 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
             >
               <span>Start Your Project</span>
               <ArrowRight className="w-4 h-4" />
@@ -77,9 +74,9 @@ export function Hero() {
 
             <Link
               href="#work"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-semibold rounded-xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/70 text-slate-900 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold rounded-lg border border-[#dddbff] dark:border-[#221a5a] bg-white dark:bg-[#0c0827] text-[#050316] dark:text-[#fbfbfe] hover:bg-[#dddbff]/30 dark:hover:bg-[#19134a] transition-colors shadow-xs cursor-pointer"
             >
-              <span>View Our Work</span>
+              <span>View Selected Work</span>
             </Link>
           </motion.div>
 
@@ -88,29 +85,29 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium pt-1"
+            className="text-xs sm:text-sm text-[#484469] dark:text-[#a39fd4] font-medium pt-1"
           >
-            Designed &amp; built by {siteConfig.founder.name} • {siteConfig.name}
+            Crafted by {siteConfig.founder.name} • {siteConfig.name}
           </motion.p>
         </div>
 
         {/* Feature Quick Badges */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto mt-12 mb-10 text-center">
-          <div className="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 shadow-sm backdrop-blur-sm flex items-center justify-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-300">
-            <Smartphone className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
-            <span>100% Mobile First</span>
+          <div className="p-3.5 rounded-lg bg-white dark:bg-[#0c0827] border border-[#dddbff] dark:border-[#221a5a] shadow-xs flex items-center justify-center gap-2 text-xs font-semibold text-[#050316] dark:text-[#dddbff]">
+            <Smartphone className="w-4 h-4 text-[#2f27ce] dark:text-[#443dff] flex-shrink-0" />
+            <span>Mobile-First Design</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 shadow-sm backdrop-blur-sm flex items-center justify-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-300">
-            <Zap className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0" />
-            <span>Fast Load Times</span>
+          <div className="p-3.5 rounded-lg bg-white dark:bg-[#0c0827] border border-[#dddbff] dark:border-[#221a5a] shadow-xs flex items-center justify-center gap-2 text-xs font-semibold text-[#050316] dark:text-[#dddbff]">
+            <Zap className="w-4 h-4 text-amber-500 flex-shrink-0" />
+            <span>Fast Page Speed</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 shadow-sm backdrop-blur-sm flex items-center justify-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-300">
-            <MessageSquare className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
-            <span>WhatsApp Ready</span>
+          <div className="p-3.5 rounded-lg bg-white dark:bg-[#0c0827] border border-[#dddbff] dark:border-[#221a5a] shadow-xs flex items-center justify-center gap-2 text-xs font-semibold text-[#050316] dark:text-[#dddbff]">
+            <MessageSquare className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+            <span>WhatsApp Connected</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 shadow-sm backdrop-blur-sm flex items-center justify-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-300">
-            <ShieldCheck className="w-4 h-4 text-sky-600 dark:text-sky-400 flex-shrink-0" />
-            <span>Production Quality</span>
+          <div className="p-3.5 rounded-lg bg-white dark:bg-[#0c0827] border border-[#dddbff] dark:border-[#221a5a] shadow-xs flex items-center justify-center gap-2 text-xs font-semibold text-[#050316] dark:text-[#dddbff]">
+            <ShieldCheck className="w-4 h-4 text-[#2f27ce] dark:text-[#443dff] flex-shrink-0" />
+            <span>Production Tested</span>
           </div>
         </div>
 

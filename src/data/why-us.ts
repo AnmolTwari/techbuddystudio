@@ -14,7 +14,7 @@ export const whyUsPillars: WhyUsPillar[] = [
     title: "Mobile First",
     subtitle: "Built for modern browsing habits",
     description:
-      "We design websites around the way customers actually browse — starting with mobile and scaling beautifully to larger screens.",
+      "We design websites around the way customers actually browse, starting with mobile and scaling seamlessly to larger screens.",
     keyPoints: [
       "Zero horizontal scrolling or layout shifts",
       "Large, finger-friendly touch targets",

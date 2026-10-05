@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "TechBuddyStudio — Modern Websites for Growing Businesses",
+    default: "TechBuddyStudio | Modern Websites for Growing Businesses",
     template: "%s | TechBuddyStudio",
   },
   description:
@@ -46,25 +46,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: "TechBuddyStudio — Modern Websites for Growing Businesses",
+    title: "TechBuddyStudio | Modern Websites for Growing Businesses",
     description:
       "TechBuddyStudio designs and builds modern, fast, mobile-friendly websites and web experiences for small businesses, startups, and growing brands.",
     siteName: siteConfig.name,
     images: [
       {
-        url: "/og-image.png",
+        url: "/newlogo.png",
         width: 1024,
         height: 1024,
-        alt: "TechBuddyStudio Logo",
+        alt: "TechBuddyStudio Official Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TechBuddyStudio — Modern Websites for Growing Businesses",
+    title: "TechBuddyStudio | Modern Websites for Growing Businesses",
     description:
       "Modern websites and web experiences for businesses that want to stand out online.",
-    images: ["/og-image.png"],
+    images: ["/newlogo.png"],
   },
   robots: {
     index: true,
@@ -88,8 +88,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: siteConfig.name,
-    image: `${SITE_URL}/og-image.png`,
-    logo: `${SITE_URL}/logo.png`,
+    image: `${SITE_URL}/newlogo.png`,
+    logo: `${SITE_URL}/newlogo.png`,
     description: siteConfig.description,
     founder: {
       "@type": "Person",
@@ -135,7 +135,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased selection:bg-indigo-600 selection:text-white">
+      <body className="min-h-screen flex flex-col antialiased selection:bg-[#2f27ce] selection:text-white dark:selection:bg-[#443dff] dark:selection:text-white">
         <ThemeProvider>
           {children}
         </ThemeProvider>

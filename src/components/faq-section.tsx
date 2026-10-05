@@ -17,16 +17,16 @@ export function FAQSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-500/20 bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 text-xs font-bold">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md border border-[#dddbff] dark:border-[#221a5a] bg-[#dddbff]/50 dark:bg-[#19134a] text-[#2f27ce] dark:text-[#dddbff] text-xs font-bold">
+            <HelpCircle className="w-3.5 h-3.5 text-[#443dff]" />
             <span>Got Questions? We&apos;ve Got Answers</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#050316] dark:text-white tracking-tight">
             Frequently Asked Questions
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300">
+          <p className="text-base sm:text-lg text-[#484469] dark:text-[#a39fd4]">
             Clear answers to common questions about working with TechBuddyStudio.
           </p>
         </div>
@@ -38,19 +38,19 @@ export function FAQSection() {
             return (
               <div
                 key={faq.id}
-                className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e1424] overflow-hidden transition-all duration-200 shadow-xs"
+                className="rounded-2xl border border-[#dddbff] dark:border-[#221a5a] bg-white dark:bg-[#0c0827] overflow-hidden transition-all duration-200 shadow-xs"
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 cursor-pointer"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#443dff] cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                  <span className="text-base sm:text-lg font-bold text-[#050316] dark:text-white">
                     {faq.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 flex-shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400" : ""
+                    className={`w-8 h-8 rounded-lg bg-[#f0effe] dark:bg-[#120e36] flex items-center justify-center text-[#484469] dark:text-[#dddbff] flex-shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 bg-[#dddbff]/60 dark:bg-[#19134a] text-[#2f27ce] dark:text-[#dddbff]" : ""
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -58,7 +58,7 @@ export function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-1 border-t border-slate-100 dark:border-slate-800/60 text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-normal animate-in slide-in-from-top-1 duration-200">
+                  <div className="px-6 pb-5 pt-1 border-t border-[#dddbff]/40 dark:border-[#221a5a] text-sm text-[#484469] dark:text-[#dddbff]/85 leading-relaxed font-normal animate-in slide-in-from-top-1 duration-200">
                     <p>{faq.answer}</p>
                   </div>
                 )}
@@ -68,12 +68,12 @@ export function FAQSection() {
         </div>
 
         {/* Have more questions */}
-        <div className="mt-12 p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-center flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
+        <div className="mt-12 p-6 rounded-2xl bg-[#f0effe]/70 dark:bg-[#120e36] border border-[#dddbff] dark:border-[#221a5a] text-center flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
           <div className="text-center sm:text-left">
-            <span className="text-sm font-bold text-slate-900 dark:text-white block">
+            <span className="text-sm font-bold text-[#050316] dark:text-white block">
               Still have a question about your project?
             </span>
-            <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
+            <span className="text-xs text-[#484469] dark:text-[#a39fd4] font-medium">
               Message us directly on WhatsApp or email anytime.
             </span>
           </div>

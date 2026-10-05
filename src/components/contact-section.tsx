@@ -63,7 +63,7 @@ export function ContactSection() {
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ["#6366f1", "#38bdf8", "#10b981", "#f59e0b"],
+          colors: ["#2f27ce", "#443dff", "#dddbff", "#050316", "#10b981"],
         });
       } catch (err) {
         console.error("Confetti error", err);
@@ -81,20 +81,20 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-28 bg-slate-50 dark:bg-[#070a10] relative">
+    <section id="contact" className="py-20 sm:py-28 bg-[#fbfbfe] dark:bg-[#050316] relative border-t border-[#dddbff]/50 dark:border-[#221a5a]/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-500/20 bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 text-xs font-bold">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md border border-[#dddbff] dark:border-[#221a5a] bg-[#dddbff]/50 dark:bg-[#19134a] text-[#2f27ce] dark:text-[#dddbff] text-xs font-bold">
+            <Sparkles className="w-3.5 h-3.5 text-[#443dff]" />
             <span>Get in Touch</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#050316] dark:text-[#fbfbfe] tracking-tight">
             Let&apos;s build something for your business.
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300">
+          <p className="text-base sm:text-lg text-[#050316]/75 dark:text-[#dddbff]/80">
             Tell us a little about your business and what you&apos;re looking for. We&apos;ll get back to you within 24 hours with ideas and a straightforward plan.
           </p>
         </div>
@@ -102,12 +102,12 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Left Column: Direct Contact Details & Quick WhatsApp */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-8 rounded-3xl bg-white dark:bg-[#0e1424] border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+            <div className="p-8 rounded-3xl bg-white dark:bg-[#0c0827] border border-[#dddbff] dark:border-[#221a5a] shadow-sm space-y-6">
               <div className="space-y-2">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                <h3 className="text-xl font-bold text-[#050316] dark:text-[#fbfbfe]">
                   Direct Contact Channels
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+                <p className="text-sm text-[#050316]/70 dark:text-[#dddbff]/70 leading-relaxed font-normal">
                   Prefer instant messaging? Chat with us directly on WhatsApp or drop us an email anytime.
                 </p>
               </div>
@@ -128,10 +128,10 @@ export function ContactSection() {
                       Fastest Response
                     </span>
                   </div>
-                  <h4 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                  <h4 className="text-base font-bold text-[#050316] dark:text-[#fbfbfe] group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                     Chat on WhatsApp
                   </h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 font-medium">
+                  <p className="text-xs text-[#050316]/70 dark:text-[#dddbff]/70 font-medium">
                     {siteConfig.contact.displayPhone} • Average reply: under 1 hour
                   </p>
                 </div>
@@ -140,35 +140,35 @@ export function ContactSection() {
               {/* Email Card */}
               <a
                 href={siteConfig.contact.mailtoUrl}
-                className="group p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 hover:border-indigo-500/40 transition-all flex items-start gap-4 block shadow-xs"
+                className="group p-5 rounded-2xl bg-[#f0effe] dark:bg-[#120e36] border border-[#dddbff] dark:border-[#221a5a] hover:border-[#443dff]/40 transition-all flex items-start gap-4 block shadow-xs"
               >
-                <div className="w-11 h-11 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center flex-shrink-0 border border-indigo-200 dark:border-transparent">
+                <div className="w-11 h-11 rounded-xl bg-[#dddbff] dark:bg-[#19134a] text-[#2f27ce] dark:text-[#dddbff] flex items-center justify-center flex-shrink-0 border border-[#dddbff] dark:border-transparent">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#050316]/50 dark:text-[#dddbff]/50">
                     Official Business Email
                   </span>
-                  <h4 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  <h4 className="text-sm font-bold text-[#050316] dark:text-[#fbfbfe] group-hover:text-[#2f27ce] dark:group-hover:text-[#443dff] transition-colors">
                     {siteConfig.contact.email}
                   </h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                  <p className="text-xs text-[#050316]/60 dark:text-[#dddbff]/60 font-medium">
                     Click to compose message
                   </p>
                 </div>
               </a>
 
               {/* Location & Response Info */}
-              <div className="space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800">
-                <div className="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300 font-medium">
-                  <MapPin className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
+              <div className="space-y-3 pt-4 border-t border-[#dddbff]/50 dark:border-[#221a5a]">
+                <div className="flex items-center gap-3 text-xs text-[#050316]/80 dark:text-[#dddbff]/80 font-medium">
+                  <MapPin className="w-4 h-4 text-[#2f27ce] dark:text-[#443dff] flex-shrink-0" />
                   <span>Based in {siteConfig.founder.location} • Working with businesses worldwide</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300 font-medium">
-                  <Clock className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
+                <div className="flex items-center gap-3 text-xs text-[#050316]/80 dark:text-[#dddbff]/80 font-medium">
+                  <Clock className="w-4 h-4 text-[#2f27ce] dark:text-[#443dff] flex-shrink-0" />
                   <span>Response time: Within 24 hours (usually faster)</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                <div className="flex items-center gap-3 text-xs text-[#050316]/80 dark:text-[#dddbff]/80 font-medium">
                   <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-500 flex-shrink-0" />
                   <span>No obligation, no spam, 100% confidential</span>
                 </div>
@@ -178,7 +178,7 @@ export function ContactSection() {
 
           {/* Right Column: Interactive Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#0e1424] border border-slate-200 dark:border-slate-800 shadow-xl">
+            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#0c0827] border border-[#dddbff] dark:border-[#221a5a] shadow-xl">
               {isSubmitted ? (
                 <div className="py-12 text-center space-y-6 animate-in fade-in zoom-in-95 duration-300">
                   <div className="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-500 flex items-center justify-center mx-auto border border-emerald-200 dark:border-emerald-500/20 shadow-md">
@@ -186,11 +186,11 @@ export function ContactSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                    <h3 className="text-2xl font-bold text-[#050316] dark:text-[#fbfbfe]">
                       Thank You, {formData.name || "Friend"}!
                     </h3>
-                    <p className="text-sm text-slate-700 dark:text-slate-300 max-w-md mx-auto leading-relaxed font-normal">
-                      We received your project inquiry for <strong className="text-indigo-600 dark:text-indigo-400 font-bold">{formData.serviceNeeded}</strong>. We&apos;ll review your requirements and reach out to you shortly via email or WhatsApp.
+                    <p className="text-sm text-[#050316]/75 dark:text-[#dddbff]/80 max-w-md mx-auto leading-relaxed font-normal">
+                      We received your project inquiry for <strong className="text-[#2f27ce] dark:text-[#443dff] font-bold">{formData.serviceNeeded}</strong>. We&apos;ll review your requirements and reach out to you shortly via email or WhatsApp.
                     </p>
                   </div>
 
@@ -219,7 +219,7 @@ export function ContactSection() {
                           message: "",
                         });
                       }}
-                      className="text-xs font-semibold text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200 underline cursor-pointer"
+                      className="text-xs font-semibold text-[#050316]/60 hover:text-[#050316] dark:text-[#dddbff]/60 dark:hover:text-[#fbfbfe] underline cursor-pointer"
                     >
                       Submit another inquiry
                     </button>
@@ -230,7 +230,7 @@ export function ContactSection() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Name */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
+                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
                         Your Name <span className="text-rose-500">*</span>
                       </label>
                       <input
@@ -239,13 +239,13 @@ export function ContactSection() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. John Doe"
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
                       />
                     </div>
 
                     {/* Business Name */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
+                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
                         Business Name <span className="text-rose-500">*</span>
                       </label>
                       <input
@@ -253,8 +253,8 @@ export function ContactSection() {
                         required
                         value={formData.businessName}
                         onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                        placeholder="e.g. Haven Cafe &amp; Roasters"
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        placeholder="e.g. Haven Cafe & Roasters"
+                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
                       />
                     </div>
                   </div>
@@ -262,7 +262,7 @@ export function ContactSection() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Email */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
+                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
                         Email Address <span className="text-rose-500">*</span>
                       </label>
                       <input
@@ -271,13 +271,13 @@ export function ContactSection() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="john@example.com"
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
                       />
                     </div>
 
                     {/* WhatsApp / Phone */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
+                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
                         WhatsApp / Phone <span className="text-rose-500">*</span>
                       </label>
                       <input
@@ -286,7 +286,7 @@ export function ContactSection() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. +91 98765 43210"
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
                       />
                     </div>
                   </div>
@@ -294,16 +294,16 @@ export function ContactSection() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Business Type */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
+                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
                         Business Type
                       </label>
                       <select
                         value={formData.businessType}
                         onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
+                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm font-medium text-[#050316] dark:text-[#fbfbfe] focus:outline-none focus:ring-2 focus:ring-[#443dff] cursor-pointer"
                       >
                         {businessTypeOptions.map((type) => (
-                          <option key={type} value={type} className="dark:bg-slate-900 text-slate-900 dark:text-white">
+                          <option key={type} value={type} className="dark:bg-[#0c0827] text-[#050316] dark:text-[#fbfbfe]">
                             {type}
                           </option>
                         ))}
@@ -312,16 +312,16 @@ export function ContactSection() {
 
                     {/* What do you need? */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
+                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
                         What do you need? <span className="text-rose-500">*</span>
                       </label>
                       <select
                         value={formData.serviceNeeded}
                         onChange={(e) => setFormData({ ...formData, serviceNeeded: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
+                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm font-medium text-[#050316] dark:text-[#fbfbfe] focus:outline-none focus:ring-2 focus:ring-[#443dff] cursor-pointer"
                       >
                         {serviceOptions.map((opt) => (
-                          <option key={opt} value={opt} className="dark:bg-slate-900 text-slate-900 dark:text-white">
+                          <option key={opt} value={opt} className="dark:bg-[#0c0827] text-[#050316] dark:text-[#fbfbfe]">
                             {opt}
                           </option>
                         ))}
@@ -331,29 +331,29 @@ export function ContactSection() {
 
                   {/* Existing Website (Optional) */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
-                      Existing Website or Instagram Link <span className="text-slate-500 font-normal">(optional)</span>
+                    <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
+                      Existing Website or Instagram Link <span className="text-[#050316]/50 dark:text-[#dddbff]/50 font-normal">(optional)</span>
                     </label>
                     <input
                       type="text"
                       value={formData.existingWebsite}
                       onChange={(e) => setFormData({ ...formData, existingWebsite: e.target.value })}
                       placeholder="e.g. www.yourbusiness.com or @instagramhandle"
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
                     />
                   </div>
 
                   {/* Message */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
-                      Project Details / Goals <span className="text-slate-500 font-normal">(optional)</span>
+                    <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
+                      Project Details / Goals <span className="text-[#050316]/50 dark:text-[#dddbff]/50 font-normal">(optional)</span>
                     </label>
                     <textarea
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us a little about your goals, specific features you have in mind, or your target timeline..."
-                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
                     />
                   </div>
 
@@ -361,7 +361,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-bold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/40 hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    className="w-full inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-bold rounded-lg bg-[#2f27ce] hover:bg-[#251ea8] dark:bg-[#443dff] dark:hover:bg-[#342de6] text-white shadow-md shadow-[#2f27ce]/20 hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
                     {isSubmitting ? (
                       <>
@@ -376,8 +376,8 @@ export function ContactSection() {
                     )}
                   </button>
 
-                  <p className="text-[11px] text-center text-slate-500 font-medium">
-                    🔒 We respect your privacy. Your information is strictly used to discuss your website project.
+                  <p className="text-[11px] text-center text-[#050316]/50 dark:text-[#dddbff]/50 font-medium">
+                    We respect your privacy. Your information is strictly used to discuss your website project.
                   </p>
                 </form>
               )}

@@ -31,7 +31,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? "bg-white/80 dark:bg-[#080b11]/85 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 shadow-sm"
+        ? "bg-[#fbfbfe]/85 dark:bg-[#050316]/85 backdrop-blur-md border-b border-[#dddbff]/80 dark:border-[#221a5a]/80 shadow-sm"
         : "bg-transparent border-b border-transparent"
         }`}
     >
@@ -40,24 +40,24 @@ export function Navbar() {
           {/* Official Logo & Brand */}
           <Link
             href="#home"
-            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-xl p-1"
+            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#443dff] rounded-xl p-1"
             aria-label="TechBuddyStudio - Home"
           >
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200 border border-slate-800/30 dark:border-slate-700/60 bg-black flex-shrink-0">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-[#221a5a] bg-white dark:bg-[#0c0827] flex-shrink-0 p-1">
               <Image
-                src="/logo.png"
+                src="/newlogo.png"
                 alt="TechBuddyStudio Official Logo"
                 fill
                 sizes="48px"
-                className="object-cover"
+                className="object-contain p-0.5"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg sm:text-xl tracking-tight text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-tight">
-                TechBuddy<span className="text-indigo-600 dark:text-sky-400">Studio</span>
+              <span className="font-bold text-lg sm:text-xl tracking-tight text-[#050316] dark:text-[#fbfbfe] group-hover:text-[#2f27ce] dark:group-hover:text-[#443dff] transition-colors leading-tight">
+                TechBuddy<span className="text-[#2f27ce] dark:text-[#443dff]">Studio</span>
               </span>
-              <span className="text-[10px] uppercase font-semibold tracking-wider text-slate-500 dark:text-slate-400">
+              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#484469] dark:text-[#a39fd4]">
                 Web &amp; Digital Solutions
               </span>
             </div>
@@ -69,7 +69,7 @@ export function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors"
+                className="px-3.5 py-2 text-sm font-medium text-[#050316]/80 hover:text-[#2f27ce] dark:text-[#dddbff]/90 dark:hover:text-white rounded-lg hover:bg-[#dddbff]/40 dark:hover:bg-[#19134a]/60 transition-colors"
               >
                 {item.name}
               </Link>
@@ -81,21 +81,21 @@ export function Navbar() {
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="w-10 h-10 rounded-xl flex items-center justify-center border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 cursor-pointer"
+              className="w-10 h-10 rounded-xl flex items-center justify-center border border-[#dddbff] dark:border-[#221a5a] bg-white/60 dark:bg-[#0c0827]/60 text-[#050316] dark:text-[#dddbff] hover:bg-[#dddbff]/40 dark:hover:bg-[#19134a] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#443dff] cursor-pointer"
               aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
               title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             >
               {theme === "dark" ? (
                 <Sun className="w-4 h-4 text-amber-400 transition-transform rotate-0 scale-100" />
               ) : (
-                <Moon className="w-4 h-4 text-indigo-600 transition-transform rotate-0 scale-100" />
+                <Moon className="w-4 h-4 text-[#2f27ce] transition-transform rotate-0 scale-100" />
               )}
             </button>
 
             {/* Primary CTA */}
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/25 hover:shadow-indigo-600/40 hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-[#2f27ce] hover:bg-[#251ea8] dark:bg-[#443dff] dark:hover:bg-[#342de6] text-white shadow-md shadow-[#2f27ce]/25 hover:shadow-[#2f27ce]/40 hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#443dff]"
             >
               <span>Get a Website</span>
               <ArrowRight className="w-4 h-4" />
@@ -106,19 +106,19 @@ export function Navbar() {
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={toggleTheme}
-              className="w-9 h-9 rounded-lg flex items-center justify-center border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300"
+              className="w-9 h-9 rounded-lg flex items-center justify-center border border-[#dddbff] dark:border-[#221a5a] bg-white dark:bg-[#0c0827] text-[#050316] dark:text-[#dddbff]"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
                 <Sun className="w-4 h-4 text-amber-400" />
               ) : (
-                <Moon className="w-4 h-4 text-indigo-600" />
+                <Moon className="w-4 h-4 text-[#2f27ce]" />
               )}
             </button>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="w-10 h-10 rounded-lg flex items-center justify-center border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 focus:outline-none"
+              className="w-10 h-10 rounded-lg flex items-center justify-center border border-[#dddbff] dark:border-[#221a5a] bg-white dark:bg-[#0c0827] text-[#050316] dark:text-[#dddbff] focus:outline-none"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -130,24 +130,24 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-[#080b11]/95 backdrop-blur-xl px-4 pt-3 pb-6 animate-in slide-in-from-top duration-200 shadow-xl">
+        <div className="md:hidden border-b border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe]/95 dark:bg-[#050316]/95 backdrop-blur-xl px-4 pt-3 pb-6 animate-in slide-in-from-top duration-200 shadow-xl">
           <nav className="flex flex-col space-y-1.5">
             {siteConfig.navLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={closeMenu}
-                className="px-4 py-3 text-base font-medium text-slate-700 hover:text-indigo-600 dark:text-slate-200 dark:hover:text-indigo-400 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors"
+                className="px-4 py-3 text-base font-medium text-[#050316] hover:text-[#2f27ce] dark:text-[#dddbff] dark:hover:text-white rounded-xl hover:bg-[#dddbff]/30 dark:hover:bg-[#19134a]/60 transition-colors"
               >
                 {item.name}
               </Link>
             ))}
 
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2.5">
+            <div className="pt-4 border-t border-[#dddbff] dark:border-[#221a5a] flex flex-col gap-2.5">
               <Link
                 href="#contact"
                 onClick={closeMenu}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-base font-semibold rounded-xl bg-indigo-600 text-white shadow-md shadow-indigo-600/25"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-base font-semibold rounded-xl bg-[#2f27ce] dark:bg-[#443dff] text-white shadow-md shadow-[#2f27ce]/25"
               >
                 <span>Get a Website</span>
                 <ArrowRight className="w-4 h-4" />
