@@ -43,7 +43,7 @@ export const featuredProjects: Project[] = [
     featuredRank: 1,
     features: [
       "Direct booking & instant room selection experience",
-      "Seamless WhatsApp reservation & enquiry flow",
+      "Seamless real-time reservation & enquiry flow",
       "Interactive ROI calculator for hotel revenue",
       "Banquet & event quote builder",
       "Hospitality-focused conversion architecture",
@@ -60,7 +60,7 @@ export const featuredProjects: Project[] = [
     },
     highlights: [
       { label: "Focus", value: "Direct Bookings" },
-      { label: "Channel", value: "WhatsApp Funnel" },
+      { label: "Channel", value: "Instant Booking" },
       { label: "Performance", value: "Fast & Fluid" },
     ],
   },
@@ -76,7 +76,7 @@ export const featuredProjects: Project[] = [
     features: [
       "Dynamic trip discovery with visual difficulty & elevation badges",
       "Interactive day-by-day expedition itineraries",
-      "High-converting WhatsApp booking & enquiry funnel",
+      "High-converting batch booking & enquiry funnel",
       "Annual departure schedule generator & batch switcher",
       "Traveler gear checklist & prep guides",
       "Mobile-optimized high-engagement travel UI",

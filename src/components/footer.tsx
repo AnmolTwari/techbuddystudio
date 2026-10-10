@@ -4,12 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { 
-  Mail, 
-  MapPin, 
-  ArrowUp, 
-  Globe 
-} from "lucide-react";
+import { ArrowUp, Globe, MapPin } from "lucide-react";
 import { InstagramIcon, LinkedinIcon, GithubIcon } from "@/components/icons";
 
 export function Footer() {
@@ -18,46 +13,37 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#050316] text-[#dddbff]/80 pt-16 pb-12 border-t border-[#221a5a]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#221a5a]/80">
-          {/* Brand Info & Official Logo */}
-          <div className="lg:col-span-5 space-y-4">
-            <Link href="#home" className="flex items-center gap-3 inline-flex group">
-              <div className="relative w-10 h-10 rounded-lg overflow-hidden border border-[#221a5a] bg-white dark:bg-[#0c0827] flex-shrink-0 p-1 group-hover:scale-105 transition-transform">
+    <footer className="bg-[#000a1f] text-slate-300 pt-20 2xl:pt-24 pb-12 border-t border-white/10 transition-colors duration-300">
+      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-10 2xl:gap-14 pb-16 border-b border-white/10">
+          {/* Brand Info & Studio Tagline */}
+          <div className="lg:col-span-4 space-y-5">
+            <Link href="/" className="flex items-center gap-3 inline-flex group">
+              <div className="relative w-10 h-10 2xl:w-12 2xl:h-12 rounded-full overflow-hidden border border-white/20 bg-[#001238] flex-shrink-0 p-1 group-hover:scale-105 transition-transform">
                 <Image
                   src="/newlogo.png"
                   alt="TechBuddyStudio Official Logo"
                   fill
-                  sizes="40px"
+                  sizes="48px"
                   className="object-contain p-0.5"
                 />
               </div>
-              <span className="font-bold text-xl text-white tracking-tight">
-                TechBuddy<span className="text-[#443dff]">Studio</span>
+              <span className="font-bold text-xl 2xl:text-2xl text-white tracking-tight font-heading">
+                TechBuddy<span className="text-[#eae8ff]">Studio</span>
               </span>
             </Link>
 
-            <p className="text-sm text-[#dddbff]/70 max-w-sm leading-relaxed font-normal">
-              Modern websites for growing businesses. We design and develop fast, mobile-first web experiences that build credibility and make customer connection effortless.
+            <p className="text-sm 2xl:text-base text-slate-400 max-w-sm leading-relaxed font-normal">
+              TechBuddyStudio provides bespoke digital engineering, with custom design, performance optimization, and conversion built into one platform.
             </p>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-3 pt-2">
-              <a
-                href={siteConfig.socials.instagram.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#19134a] hover:bg-[#2f27ce] text-[#dddbff] hover:text-white flex items-center justify-center transition-colors"
-                aria-label="Instagram"
-              >
-                <InstagramIcon className="w-4 h-4" />
-              </a>
+            {/* Social Icons (Pill Buttons) */}
+            <div className="flex items-center gap-2.5 pt-2">
               <a
                 href={siteConfig.socials.linkedin.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#19134a] hover:bg-[#2f27ce] text-[#dddbff] hover:text-white flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#eae8ff] text-slate-300 hover:text-[#001c55] border border-white/10 flex items-center justify-center transition-all"
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon className="w-4 h-4" />
@@ -66,117 +52,158 @@ export function Footer() {
                 href={siteConfig.socials.github.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#19134a] hover:bg-[#2f27ce] text-[#dddbff] hover:text-white flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#eae8ff] text-slate-300 hover:text-[#001c55] border border-white/10 flex items-center justify-center transition-all"
                 aria-label="GitHub"
               >
                 <GithubIcon className="w-4 h-4" />
               </a>
               <a
-                href={siteConfig.socials.founderPortfolio.url}
+                href={siteConfig.socials.instagram.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#19134a] hover:bg-[#2f27ce] text-[#dddbff] hover:text-white flex items-center justify-center transition-colors"
-                aria-label="Founder's Technical Portfolio"
-                title="Founder's Technical Portfolio"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-[#eae8ff] text-slate-300 hover:text-[#001c55] border border-white/10 flex items-center justify-center transition-all"
+                aria-label="Instagram"
               >
-                <Globe className="w-4 h-4" />
+                <InstagramIcon className="w-4 h-4" />
               </a>
             </div>
           </div>
 
-          {/* Quick Navigation Links */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs uppercase font-bold tracking-wider text-[#dddbff]">
-              Navigation
+          {/* About TechBuddyStudio */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-xs 2xl:text-sm uppercase font-extrabold tracking-wider text-white font-heading">
+              About Studio
             </h4>
-            <ul className="space-y-2 text-sm">
-              {siteConfig.navLinks.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-[#dddbff]/70 hover:text-white transition-colors font-medium"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+            <ul className="space-y-2.5 text-sm 2xl:text-base">
+              <li>
+                <Link href="/about" className="text-slate-400 hover:text-white transition-colors">
+                  Who We Are
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-slate-400 hover:text-white transition-colors">
+                  Why Choose Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/process" className="text-slate-400 hover:text-white transition-colors">
+                  Our Process
+                </Link>
+              </li>
+              <li>
+                <Link href="/discovery-call" className="text-slate-400 hover:text-white transition-colors font-semibold text-[#eae8ff]">
+                  Book Discovery Call
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-slate-400 hover:text-white transition-colors">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Legal / Policy Links */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs uppercase font-bold tracking-wider text-[#dddbff]">
-              Legal
+          {/* Solutions */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-xs 2xl:text-sm uppercase font-extrabold tracking-wider text-white font-heading">
+              Solutions
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-sm 2xl:text-base">
               <li>
-                <Link
-                  href="/privacy-policy"
-                  className="text-[#dddbff]/70 hover:text-white transition-colors font-medium"
-                >
+                <Link href="/solutions#hospitality" className="text-slate-400 hover:text-white transition-colors">
+                  For Hospitality &amp; Stays
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions#retail" className="text-slate-400 hover:text-white transition-colors">
+                  For Retail &amp; Brands
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions#startups" className="text-slate-400 hover:text-white transition-colors">
+                  For Startups &amp; SaaS
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions#business" className="text-slate-400 hover:text-white transition-colors">
+                  For Business Websites
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Products & Platforms */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-xs 2xl:text-sm uppercase font-extrabold tracking-wider text-white font-heading">
+              Products
+            </h4>
+            <ul className="space-y-2.5 text-sm 2xl:text-base">
+              <li>
+                <a href="https://hotel-fawn-seven.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                  DirectStay (Hotel Engine)
+                </a>
+              </li>
+              <li>
+                <a href="https://traveller-alpha-sable.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                  WanderTribe (Expeditions)
+                </a>
+              </li>
+              <li>
+                <a href="https://managemyshop.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                  ShopManager (Retail POS)
+                </a>
+              </li>
+              <li>
+                <Link href="/work" className="text-slate-400 hover:text-white transition-colors">
+                  All Live Platforms
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-xs 2xl:text-sm uppercase font-extrabold tracking-wider text-white font-heading">
+              Resources
+            </h4>
+            <ul className="space-y-2.5 text-sm 2xl:text-base">
+              <li>
+                <Link href="/services" className="text-slate-400 hover:text-white transition-colors">
+                  Engineering Scope
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="text-slate-400 hover:text-white transition-colors">
+                  FAQ &amp; Delivery
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy" className="text-slate-400 hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/terms-conditions"
-                  className="text-[#dddbff]/70 hover:text-white transition-colors font-medium"
-                >
+                <Link href="/terms-conditions" className="text-slate-400 hover:text-white transition-colors">
                   Terms &amp; Conditions
                 </Link>
               </li>
             </ul>
           </div>
-
-          {/* Contact Information */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase font-bold tracking-wider text-[#dddbff]">
-              Get in Touch
-            </h4>
-            <div className="space-y-2.5 text-sm">
-              <div>
-                <span className="block text-xs text-[#dddbff]/50">Email Inquiries:</span>
-                <a
-                  href={siteConfig.contact.mailtoUrl}
-                  className="text-white hover:text-[#443dff] transition-colors font-medium"
-                >
-                  {siteConfig.contact.email}
-                </a>
-              </div>
-
-              <div>
-                <span className="block text-xs text-[#dddbff]/50">WhatsApp / Call:</span>
-                <a
-                  href={siteConfig.contact.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-[#443dff] transition-colors font-medium"
-                >
-                  {siteConfig.contact.displayPhone}
-                </a>
-              </div>
-
-              <div className="pt-1 flex items-center gap-2 text-xs text-[#dddbff]/70">
-                <MapPin className="w-3.5 h-3.5 text-[#443dff]" />
-                <span>{siteConfig.contact.location} (Global Client Support)</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#dddbff]/50">
-          <p>© 2026 {siteConfig.name}. All rights reserved.</p>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs 2xl:text-sm text-slate-500">
+          <p>TechBuddyStudio © 2026 All Rights Reserved</p>
 
           <div className="flex items-center gap-6">
-            <span>Crafted by {siteConfig.founder.name}</span>
+            <span>Crafted with precision by TechBuddyStudio</span>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1 text-[#dddbff]/60 hover:text-white transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer border border-white/10"
               aria-label="Scroll back to top"
             >
               <span>Back to top</span>
-              <ArrowUp className="w-3.5 h-3.5" />
+              <ArrowUp className="w-3 h-3" />
             </button>
           </div>
         </div>
@@ -184,3 +211,4 @@ export function Footer() {
     </footer>
   );
 }
+

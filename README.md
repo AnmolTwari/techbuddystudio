@@ -197,16 +197,14 @@ The project is optimized for instant deployment on [Vercel](https://vercel.com/)
 
 ---
 
-## 👤 Founder & Contact
+## 👤 Studio & Contact
 
-**TechBuddyStudio** was founded and engineered by **Anmol Tiwari**.
+**TechBuddyStudio** — Full-Cycle Web & Digital Systems Studio.
 
 - 🌐 **Live Website**: [techbuddystudio.vercel.app](https://techbuddystudio.vercel.app/)
-- 👨‍💻 **Founder Portfolio**: [iamanmol.vercel.app](https://iamanmol.vercel.app/)
-- 💼 **LinkedIn**: [linkedin.com/in/openit](https://linkedin.com/in/openit)
-- 🐙 **GitHub**: [@AnmolTwari](https://github.com/AnmolTwari)
+- 💼 **LinkedIn**: [linkedin.com](https://linkedin.com)
+- 🐙 **GitHub**: [github.com/AnmolTwari/techbuddystudio](https://github.com/AnmolTwari/techbuddystudio)
 - 📸 **Instagram**: [@techbuddystudio](https://www.instagram.com/techbuddystudio/)
-- 📱 **WhatsApp**: [+91 87266 16847](https://wa.me/918726616847)
 - ✉️ **Email**: [techbuddystudio@gmail.com](mailto:techbuddystudio@gmail.com)
 
 ---

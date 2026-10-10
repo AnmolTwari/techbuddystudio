@@ -11,33 +11,23 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://techbuddyst
 export const siteConfig = {
   name: "TechBuddyStudio",
   legalName: "TechBuddyStudio",
-  tagline: "Modern Websites for Growing Businesses",
+  tagline: "The Infrastructure Layer for Modern Business",
   description:
-    "TechBuddyStudio designs and builds modern, fast, mobile-friendly websites and web experiences that help businesses build credibility, showcase their services, and make it easier for customers to connect.",
+    "TechBuddyStudio designs and builds high-performance web platforms, direct booking engines, and custom digital applications for growing businesses and enterprises.",
   url: SITE_URL,
-  founder: {
-    name: "Anmol Tiwari",
-    role: "Founder & Full Stack Developer",
-    location: "India",
-    experienceHighlight: "Java Full Stack Development Intern at Mphasis",
-    portfolioUrl: "https://iamanmol.vercel.app/",
-    githubUrl: "https://github.com/AnmolTwari",
-    linkedinUrl: "https://linkedin.com/in/openit",
+  studio: {
+    name: "TechBuddyStudio Team",
+    role: "Full-Cycle Web & Systems Studio",
+    location: "India & Worldwide",
+    experienceHighlight: "Modern Web Engineering & High-Performance Cloud Architecture",
+    portfolioUrl: "/work",
   },
   contact: {
     email: "techbuddystudio@gmail.com",
     mailtoUrl: "mailto:techbuddystudio@gmail.com",
-    phone: "8726616847",
-    displayPhone: "+91 87266 16847",
-    whatsappNumber: "918726616847", // International standard format for India (91 + 10 digits)
-    whatsappMessage:
-      "Hi TechBuddyStudio, I came across your website and would like to discuss a website for my business.",
-    get whatsappUrl() {
-      return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(
-        this.whatsappMessage
-      )}`;
-    },
-    location: "India",
+    phone: "9128726616",
+    displayPhone: "+91 91287 26616",
+    location: "India (Worldwide Client Delivery)",
   },
   socials: {
     instagram: {
@@ -47,25 +37,22 @@ export const siteConfig = {
     },
     linkedin: {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/openit",
+      url: "https://linkedin.com",
     },
     github: {
       name: "GitHub",
-      url: "https://github.com/AnmolTwari",
-    },
-    founderPortfolio: {
-      name: "Anmol's Portfolio",
-      url: "https://iamanmol.vercel.app/",
+      url: "https://github.com",
     },
   },
   navLinks: [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Work", href: "#work" },
-    { name: "Process", href: "#process" },
-    { name: "About", href: "#about" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "Services", href: "/services" },
+    { name: "Work", href: "/work" },
+    { name: "Process", href: "/process" },
+    { name: "About", href: "/about" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Contact", href: "/contact" },
   ],
   keywords: [
     "TechBuddyStudio",
@@ -77,7 +64,6 @@ export const siteConfig = {
     "mobile friendly websites",
     "hospitality website development",
     "e-commerce websites",
-    "Anmol Tiwari",
     "high performance web applications",
   ],
 };

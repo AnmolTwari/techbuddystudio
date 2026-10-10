@@ -21,11 +21,11 @@ export const faqsData: FAQItem[] = [
       "Yes. If your current website looks dated, loads slowly, or doesn't work well on mobile phones, we can completely redesign it. We will modernize your visual branding, structure the content for higher customer conversions, speed up load times, and ensure a seamless mobile experience while preserving any existing search rankings.",
   },
   {
-    id: "whatsapp-enquiries",
+    id: "booking-enquiries",
     category: "Features",
-    question: "Can you add WhatsApp and enquiry forms?",
+    question: "Can you integrate direct booking and customized inquiry forms?",
     answer:
-      "Yes, absolutely. We design every website with practical customer contact funnels in mind. This includes floating WhatsApp buttons with pre-filled enquiry messages, customized multi-step contact forms, quick call-to-action buttons, and quote calculators that make it effortless for customers to reach you.",
+      "Yes, absolutely. We design every website with practical customer conversion funnels in mind. This includes real-time booking reservation calendars, customized multi-step contact forms, 1-click inquiry routing, and interactive quote calculators that make it effortless for customers to book or reach your team.",
   },
   {
     id: "mobile-responsiveness",
@@ -39,7 +39,7 @@ export const faqsData: FAQItem[] = [
     category: "Services",
     question: "Can you build an online store?",
     answer:
-      "Yes. We build clean, high-performing e-commerce websites with intuitive product showcases, category filtering, cart & checkout workflows, and secure payment integration. We also create lightweight catalogs with direct WhatsApp checkout for retail and consumer brands.",
+      "Yes. We build clean, high-performing e-commerce websites with intuitive product showcases, category filtering, cart & checkout workflows, and secure payment integration. We also create lightweight digital catalogs and POS portals for retail and consumer brands.",
   },
   {
     id: "custom-web-apps",

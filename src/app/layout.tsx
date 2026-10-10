@@ -1,30 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig, SITE_URL } from "@/config/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "TechBuddyStudio | Modern Websites for Growing Businesses",
+    default: "TechBuddyStudio | The Infrastructure Layer for Modern Business",
     template: "%s | TechBuddyStudio",
   },
   description:
-    "TechBuddyStudio designs and builds modern, fast, mobile-friendly websites and web experiences for small businesses, startups, and growing brands.",
+    "TechBuddyStudio designs and builds high-performance web platforms, direct booking engines, and custom digital applications for growing businesses and enterprises.",
   keywords: siteConfig.keywords,
-  authors: [{ name: siteConfig.founder.name, url: siteConfig.founder.portfolioUrl }],
-  creator: siteConfig.founder.name,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
   publisher: siteConfig.name,
   icons: {
     icon: [
@@ -46,9 +49,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: "TechBuddyStudio | Modern Websites for Growing Businesses",
+    title: "TechBuddyStudio | The Infrastructure Layer for Modern Business",
     description:
-      "TechBuddyStudio designs and builds modern, fast, mobile-friendly websites and web experiences for small businesses, startups, and growing brands.",
+      "One platform for custom design, engineering, and conversion. High-performance web applications and booking infrastructure.",
     siteName: siteConfig.name,
     images: [
       {
@@ -61,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TechBuddyStudio | Modern Websites for Growing Businesses",
+    title: "TechBuddyStudio | The Infrastructure Layer for Modern Business",
     description:
-      "Modern websites and web experiences for businesses that want to stand out online.",
+      "One platform for custom design, engineering, and conversion. High-performance web applications and booking infrastructure.",
     images: ["/newlogo.png"],
   },
   robots: {
@@ -91,15 +94,6 @@ export default function RootLayout({
     image: `${SITE_URL}/newlogo.png`,
     logo: `${SITE_URL}/newlogo.png`,
     description: siteConfig.description,
-    founder: {
-      "@type": "Person",
-      name: siteConfig.founder.name,
-      sameAs: [
-        siteConfig.founder.portfolioUrl,
-        siteConfig.founder.githubUrl,
-        siteConfig.founder.linkedinUrl,
-      ],
-    },
     url: SITE_URL,
     telephone: siteConfig.contact.displayPhone,
     email: siteConfig.contact.email,
@@ -126,8 +120,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}
-      suppressHydrationWarning
+      className={`${plusJakartaSans.variable} ${inter.variable} scroll-smooth`}
     >
       <head>
         <script
@@ -135,10 +128,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased selection:bg-[#2f27ce] selection:text-white dark:selection:bg-[#443dff] dark:selection:text-white">
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+      <body className="min-h-screen flex flex-col bg-white text-[#070708] antialiased selection:bg-[#001c55] selection:text-[#eae8ff]">
+        {children}
       </body>
     </html>
   );

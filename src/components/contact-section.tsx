@@ -1,17 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import confetti from "canvas-confetti";
 import { siteConfig } from "@/config/site";
 import { 
-  Send, 
-  MessageSquare, 
   Mail, 
   MapPin, 
   CheckCircle2, 
   Clock, 
   Sparkles, 
-  ShieldCheck
+  ShieldCheck,
+  ArrowRight,
+  PhoneCall,
+  CalendarCheck
 } from "lucide-react";
 
 export function ContactSection() {
@@ -33,21 +35,10 @@ export function ContactSection() {
     "New Business Website",
     "Landing Page",
     "Website Redesign",
-    "E-commerce",
+    "E-commerce & Booking",
     "Custom Web Application",
     "Website Maintenance",
     "Not Sure Yet",
-  ];
-
-  const businessTypeOptions = [
-    "Restaurant / Cafe / Hotel",
-    "Retail & E-commerce",
-    "Gym / Fitness / Salon",
-    "Travel & Tourism",
-    "Coach / Consultant",
-    "Professional Services (Law, Medical, Agency)",
-    "Startup / Tech Company",
-    "Other Business",
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -63,7 +54,7 @@ export function ContactSection() {
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ["#2f27ce", "#443dff", "#dddbff", "#050316", "#10b981"],
+          colors: ["#001c55", "#eae8ff", "#5030cc", "#10b981"],
         });
       } catch (err) {
         console.error("Confetti error", err);
@@ -71,106 +62,99 @@ export function ContactSection() {
     }, 800);
   };
 
-  const createWhatsAppInquiry = () => {
-    const text = `Hi TechBuddyStudio, I'm ${formData.name || "a business owner"}${
-      formData.businessName ? ` from ${formData.businessName}` : ""
-    }. I'm looking for ${formData.serviceNeeded}.${
-      formData.message ? ` Details: ${formData.message}` : ""
-    }`;
-    return `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(text)}`;
-  };
-
   return (
-    <section id="contact" className="py-20 sm:py-28 bg-[#fbfbfe] dark:bg-[#050316] relative border-t border-[#dddbff]/50 dark:border-[#221a5a]/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md border border-[#dddbff] dark:border-[#221a5a] bg-[#dddbff]/50 dark:bg-[#19134a] text-[#2f27ce] dark:text-[#dddbff] text-xs font-bold">
-            <Sparkles className="w-3.5 h-3.5 text-[#443dff]" />
-            <span>Get in Touch</span>
+    <section id="contact" className="py-24 sm:py-32 2xl:py-36 bg-[#f6fafe] dark:bg-[#070b19] relative transition-colors duration-300">
+      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Split Two-Column Section Header */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16 sm:mb-20">
+          <div className="lg:col-span-6 space-y-3">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#001c55] dark:text-[#eae8ff]">
+              <Sparkles className="w-3.5 h-3.5 text-[#5030cc] dark:text-[#c6cbfb]" />
+              Get in Touch
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight text-[#070708] dark:text-white leading-[1.15] font-heading">
+              Let&apos;s Build Something for Your Business.
+            </h2>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#050316] dark:text-[#fbfbfe] tracking-tight">
-            Let&apos;s build something for your business.
-          </h2>
-
-          <p className="text-base sm:text-lg text-[#050316]/75 dark:text-[#dddbff]/80">
-            Tell us a little about your business and what you&apos;re looking for. We&apos;ll get back to you within 24 hours with ideas and a straightforward plan.
-          </p>
+          <div className="lg:col-span-6 space-y-4 pt-1 lg:pt-6">
+            <p className="text-base sm:text-lg 2xl:text-xl text-[#646a69] dark:text-[#9ba3b8] leading-relaxed font-normal">
+              Tell us a little about your business and what you&apos;re looking for. We&apos;ll get back to you within 24 hours with ideas, fixed estimates, and a straightforward roadmap.
+            </p>
+            <p className="text-base sm:text-lg 2xl:text-xl text-[#646a69] dark:text-[#9ba3b8] leading-relaxed font-normal">
+              Prefer a direct consultation? You can also book a discovery call with our lead engineers.
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Left Column: Direct Contact Details & Quick WhatsApp */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 2xl:gap-14 items-start">
+          {/* Left Column: Direct Contact Channels */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-8 rounded-3xl bg-white dark:bg-[#0c0827] border border-[#dddbff] dark:border-[#221a5a] shadow-sm space-y-6">
+            <div className="p-8 sm:p-10 2xl:p-12 rounded-3xl bg-white dark:bg-[#0b1126] border border-slate-200/80 dark:border-slate-800/80 shadow-sm space-y-6">
               <div className="space-y-2">
-                <h3 className="text-xl font-bold text-[#050316] dark:text-[#fbfbfe]">
+                <h3 className="text-2xl 2xl:text-3xl font-bold text-[#070708] dark:text-white font-heading">
                   Direct Contact Channels
                 </h3>
-                <p className="text-sm text-[#050316]/70 dark:text-[#dddbff]/70 leading-relaxed font-normal">
-                  Prefer instant messaging? Chat with us directly on WhatsApp or drop us an email anytime.
+                <p className="text-sm 2xl:text-base text-[#646a69] dark:text-[#9ba3b8] leading-relaxed font-normal">
+                  Connect directly with our engineering studio or submit your specifications below.
                 </p>
               </div>
 
-              {/* WhatsApp Card Highlight */}
-              <a
-                href={siteConfig.contact.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 hover:border-emerald-500/40 transition-all flex items-start gap-4 block shadow-xs"
+              {/* Consultation Call Card */}
+              <Link
+                href="/discovery-call"
+                className="group p-5.5 rounded-2xl bg-[#f8f9fc] dark:bg-[#121936] border border-slate-200/80 dark:border-slate-800 hover:border-[#001c55] dark:hover:border-[#eae8ff] transition-all flex items-start gap-4 block shadow-xs"
               >
-                <div className="w-11 h-11 rounded-xl bg-emerald-500 text-white flex items-center justify-center flex-shrink-0 shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-                  <MessageSquare className="w-5 h-5" />
+                <div className="w-12 h-12 rounded-xl bg-[#eae8ff] dark:bg-[#001c55] text-[#001c55] dark:text-[#eae8ff] flex items-center justify-center flex-shrink-0 border border-slate-200/80 dark:border-transparent group-hover:scale-105 transition-transform">
+                  <PhoneCall className="w-6 h-6" />
                 </div>
                 <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-                      Fastest Response
-                    </span>
-                  </div>
-                  <h4 className="text-base font-bold text-[#050316] dark:text-[#fbfbfe] group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                    Chat on WhatsApp
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#001c55] bg-[#eae8ff] dark:text-[#001c55] px-2 py-0.5 rounded-full">
+                    1-on-1 Strategy
+                  </span>
+                  <h4 className="text-base 2xl:text-lg font-bold text-[#070708] dark:text-white group-hover:text-[#001c55] dark:group-hover:text-[#eae8ff] transition-colors font-heading">
+                    Book Discovery Call
                   </h4>
-                  <p className="text-xs text-[#050316]/70 dark:text-[#dddbff]/70 font-medium">
-                    {siteConfig.contact.displayPhone} • Average reply: under 1 hour
+                  <p className="text-xs 2xl:text-sm text-[#646a69] dark:text-[#9ba3b8] font-medium">
+                    Discuss scope, architecture &amp; timelines directly
                   </p>
                 </div>
-              </a>
+              </Link>
 
               {/* Email Card */}
               <a
                 href={siteConfig.contact.mailtoUrl}
-                className="group p-5 rounded-2xl bg-[#f0effe] dark:bg-[#120e36] border border-[#dddbff] dark:border-[#221a5a] hover:border-[#443dff]/40 transition-all flex items-start gap-4 block shadow-xs"
+                className="group p-5.5 rounded-2xl bg-[#f8f9fc] dark:bg-[#121936] border border-slate-200/80 dark:border-slate-800 hover:border-[#001c55] dark:hover:border-[#eae8ff] transition-all flex items-start gap-4 block shadow-xs"
               >
-                <div className="w-11 h-11 rounded-xl bg-[#dddbff] dark:bg-[#19134a] text-[#2f27ce] dark:text-[#dddbff] flex items-center justify-center flex-shrink-0 border border-[#dddbff] dark:border-transparent">
-                  <Mail className="w-5 h-5" />
+                <div className="w-12 h-12 rounded-xl bg-[#eae8ff] dark:bg-[#001c55] text-[#001c55] dark:text-[#eae8ff] flex items-center justify-center flex-shrink-0 border border-slate-200/80 dark:border-transparent group-hover:scale-105 transition-transform">
+                  <Mail className="w-6 h-6" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#050316]/50 dark:text-[#dddbff]/50">
-                    Official Business Email
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#001c55] bg-[#eae8ff] dark:text-[#001c55] px-2 py-0.5 rounded-full">
+                    Official Business Inbox
                   </span>
-                  <h4 className="text-sm font-bold text-[#050316] dark:text-[#fbfbfe] group-hover:text-[#2f27ce] dark:group-hover:text-[#443dff] transition-colors">
+                  <h4 className="text-base 2xl:text-lg font-bold text-[#070708] dark:text-white group-hover:text-[#001c55] dark:group-hover:text-[#eae8ff] transition-colors font-heading">
                     {siteConfig.contact.email}
                   </h4>
-                  <p className="text-xs text-[#050316]/60 dark:text-[#dddbff]/60 font-medium">
-                    Click to compose message
+                  <p className="text-xs 2xl:text-sm text-[#646a69] dark:text-[#9ba3b8] font-medium">
+                    Send RFP, links, or project specifications
                   </p>
                 </div>
               </a>
 
-              {/* Location & Response Info */}
-              <div className="space-y-3 pt-4 border-t border-[#dddbff]/50 dark:border-[#221a5a]">
-                <div className="flex items-center gap-3 text-xs text-[#050316]/80 dark:text-[#dddbff]/80 font-medium">
-                  <MapPin className="w-4 h-4 text-[#2f27ce] dark:text-[#443dff] flex-shrink-0" />
-                  <span>Based in {siteConfig.founder.location} • Working with businesses worldwide</span>
+              {/* Location & Guarantee Info */}
+              <div className="space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                <div className="flex items-center gap-3 text-xs 2xl:text-sm text-[#646a69] dark:text-[#9ba3b8] font-medium">
+                  <MapPin className="w-4 h-4 text-[#001c55] dark:text-[#eae8ff] flex-shrink-0" />
+                  <span>Based in {siteConfig.contact.location}</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-[#050316]/80 dark:text-[#dddbff]/80 font-medium">
-                  <Clock className="w-4 h-4 text-[#2f27ce] dark:text-[#443dff] flex-shrink-0" />
-                  <span>Response time: Within 24 hours (usually faster)</span>
+                <div className="flex items-center gap-3 text-xs 2xl:text-sm text-[#646a69] dark:text-[#9ba3b8] font-medium">
+                  <Clock className="w-4 h-4 text-[#001c55] dark:text-[#eae8ff] flex-shrink-0" />
+                  <span>Response time: Within 2 hours (business days)</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-[#050316]/80 dark:text-[#dddbff]/80 font-medium">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-500 flex-shrink-0" />
-                  <span>No obligation, no spam, 100% confidential</span>
+                <div className="flex items-center gap-3 text-xs 2xl:text-sm text-[#646a69] dark:text-[#9ba3b8] font-medium">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                  <span>No obligation, 100% confidential discussion</span>
                 </div>
               </div>
             </div>
@@ -178,32 +162,30 @@ export function ContactSection() {
 
           {/* Right Column: Interactive Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#0c0827] border border-[#dddbff] dark:border-[#221a5a] shadow-xl">
+            <div className="p-8 sm:p-12 2xl:p-14 rounded-3xl bg-white dark:bg-[#0b1126] border border-slate-200/80 dark:border-slate-800/80 shadow-xl">
               {isSubmitted ? (
                 <div className="py-12 text-center space-y-6 animate-in fade-in zoom-in-95 duration-300">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-500 flex items-center justify-center mx-auto border border-emerald-200 dark:border-emerald-500/20 shadow-md">
+                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/20 shadow-md">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-[#050316] dark:text-[#fbfbfe]">
+                    <h3 className="text-2xl sm:text-3xl 2xl:text-4xl font-bold text-[#070708] dark:text-white font-heading">
                       Thank You, {formData.name || "Friend"}!
                     </h3>
-                    <p className="text-sm text-[#050316]/75 dark:text-[#dddbff]/80 max-w-md mx-auto leading-relaxed font-normal">
-                      We received your project inquiry for <strong className="text-[#2f27ce] dark:text-[#443dff] font-bold">{formData.serviceNeeded}</strong>. We&apos;ll review your requirements and reach out to you shortly via email or WhatsApp.
+                    <p className="text-sm sm:text-base 2xl:text-lg text-[#646a69] dark:text-[#9ba3b8] max-w-md mx-auto leading-relaxed font-normal">
+                      We received your project inquiry for <strong className="text-[#001c55] dark:text-[#eae8ff] font-bold">{formData.serviceNeeded}</strong>. We&apos;ll review your requirements and reach out to you shortly via email with a detailed roadmap.
                     </p>
                   </div>
 
                   <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <a
-                      href={createWhatsAppInquiry()}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 text-xs font-bold rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-md transition-colors"
+                    <Link
+                      href="/discovery-call"
+                      className="studio-btn-primary text-xs 2xl:text-sm py-3 px-6"
                     >
-                      <MessageSquare className="w-4 h-4" />
-                      <span>Send Quick Note on WhatsApp</span>
-                    </a>
+                      <CalendarCheck className="w-4 h-4" />
+                      <span>Book Discovery Call</span>
+                    </Link>
 
                     <button
                       onClick={() => {
@@ -219,18 +201,18 @@ export function ContactSection() {
                           message: "",
                         });
                       }}
-                      className="text-xs font-semibold text-[#050316]/60 hover:text-[#050316] dark:text-[#dddbff]/60 dark:hover:text-[#fbfbfe] underline cursor-pointer"
+                      className="text-xs 2xl:text-sm font-semibold text-[#646a69] hover:text-[#070708] dark:text-[#9ba3b8] dark:hover:text-white underline cursor-pointer"
                     >
                       Submit another inquiry
                     </button>
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Name */}
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
+                    <div className="space-y-2">
+                      <label className="text-xs 2xl:text-sm font-bold text-[#070708] dark:text-white block font-heading">
                         Your Name <span className="text-rose-500">*</span>
                       </label>
                       <input
@@ -239,13 +221,13 @@ export function ContactSection() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. John Doe"
-                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
+                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-[#f7f8fa] dark:bg-[#121936] text-sm 2xl:text-base text-[#070708] dark:text-white placeholder-[#646a69]/60 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#001c55] dark:focus:ring-[#eae8ff]"
                       />
                     </div>
 
                     {/* Business Name */}
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
+                    <div className="space-y-2">
+                      <label className="text-xs 2xl:text-sm font-bold text-[#070708] dark:text-white block font-heading">
                         Business Name <span className="text-rose-500">*</span>
                       </label>
                       <input
@@ -253,16 +235,16 @@ export function ContactSection() {
                         required
                         value={formData.businessName}
                         onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                        placeholder="e.g. Haven Cafe & Roasters"
-                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
+                        placeholder="e.g. Acme Studio"
+                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-[#f7f8fa] dark:bg-[#121936] text-sm 2xl:text-base text-[#070708] dark:text-white placeholder-[#646a69]/60 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#001c55] dark:focus:ring-[#eae8ff]"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Email */}
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
+                    <div className="space-y-2">
+                      <label className="text-xs 2xl:text-sm font-bold text-[#070708] dark:text-white block font-heading">
                         Email Address <span className="text-rose-500">*</span>
                       </label>
                       <input
@@ -270,90 +252,60 @@ export function ContactSection() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="john@example.com"
-                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
+                        placeholder="e.g. john@business.com"
+                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-[#f7f8fa] dark:bg-[#121936] text-sm 2xl:text-base text-[#070708] dark:text-white placeholder-[#646a69]/60 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#001c55] dark:focus:ring-[#eae8ff]"
                       />
                     </div>
 
-                    {/* WhatsApp / Phone */}
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
-                        WhatsApp / Phone <span className="text-rose-500">*</span>
+                    {/* Phone Number */}
+                    <div className="space-y-2">
+                      <label className="text-xs 2xl:text-sm font-bold text-[#070708] dark:text-white block font-heading">
+                        Phone Number (Optional)
                       </label>
                       <input
                         type="tel"
-                        required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="e.g. +91 98765 43210"
-                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
+                        placeholder="+91 98765 43210"
+                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-[#f7f8fa] dark:bg-[#121936] text-sm 2xl:text-base text-[#070708] dark:text-white placeholder-[#646a69]/60 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#001c55] dark:focus:ring-[#eae8ff]"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Business Type */}
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
-                        Business Type
-                      </label>
-                      <select
-                        value={formData.businessType}
-                        onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm font-medium text-[#050316] dark:text-[#fbfbfe] focus:outline-none focus:ring-2 focus:ring-[#443dff] cursor-pointer"
-                      >
-                        {businessTypeOptions.map((type) => (
-                          <option key={type} value={type} className="dark:bg-[#0c0827] text-[#050316] dark:text-[#fbfbfe]">
-                            {type}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    {/* What do you need? */}
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
-                        What do you need? <span className="text-rose-500">*</span>
-                      </label>
-                      <select
-                        value={formData.serviceNeeded}
-                        onChange={(e) => setFormData({ ...formData, serviceNeeded: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm font-medium text-[#050316] dark:text-[#fbfbfe] focus:outline-none focus:ring-2 focus:ring-[#443dff] cursor-pointer"
-                      >
-                        {serviceOptions.map((opt) => (
-                          <option key={opt} value={opt} className="dark:bg-[#0c0827] text-[#050316] dark:text-[#fbfbfe]">
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Existing Website (Optional) */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
-                      Existing Website or Instagram Link <span className="text-[#050316]/50 dark:text-[#dddbff]/50 font-normal">(optional)</span>
+                  {/* Service Needed Pill Selection */}
+                  <div className="space-y-2">
+                    <label className="text-xs 2xl:text-sm font-bold text-[#070708] dark:text-white block font-heading">
+                      Service Needed
                     </label>
-                    <input
-                      type="text"
-                      value={formData.existingWebsite}
-                      onChange={(e) => setFormData({ ...formData, existingWebsite: e.target.value })}
-                      placeholder="e.g. www.yourbusiness.com or @instagramhandle"
-                      className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
-                    />
+                    <div className="flex flex-wrap gap-2">
+                      {serviceOptions.map((opt) => (
+                        <button
+                          type="button"
+                          key={opt}
+                          onClick={() => setFormData({ ...formData, serviceNeeded: opt })}
+                          className={`px-3.5 py-1.5 rounded-full text-xs 2xl:text-sm font-bold transition-all cursor-pointer ${
+                            formData.serviceNeeded === opt
+                              ? "bg-[#001c55] text-[#eae8ff] dark:bg-[#eae8ff] dark:text-[#001c55] shadow-xs"
+                              : "bg-[#f7f8fa] dark:bg-[#121936] text-[#646a69] dark:text-slate-300 border border-slate-200/80 dark:border-slate-800 hover:border-[#001c55]/40"
+                          }`}
+                        >
+                          {opt}
+                        </button>
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Message */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#050316] dark:text-[#fbfbfe]">
-                      Project Details / Goals <span className="text-[#050316]/50 dark:text-[#dddbff]/50 font-normal">(optional)</span>
+                  {/* Message / Scope Details */}
+                  <div className="space-y-2">
+                    <label className="text-xs 2xl:text-sm font-bold text-[#070708] dark:text-white block font-heading">
+                      Project Notes &amp; Objectives
                     </label>
                     <textarea
-                      rows={3}
+                      rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Tell us a little about your goals, specific features you have in mind, or your target timeline..."
-                      className="w-full px-4 py-2.5 rounded-xl border border-[#dddbff] dark:border-[#221a5a] bg-[#fbfbfe] dark:bg-[#120e36] text-sm text-[#050316] dark:text-[#fbfbfe] placeholder-[#050316]/40 dark:placeholder-[#dddbff]/40 focus:outline-none focus:ring-2 focus:ring-[#443dff]"
+                      placeholder="Tell us what you'd like to achieve, any reference links, or questions..."
+                      className="w-full px-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-[#f7f8fa] dark:bg-[#121936] text-sm 2xl:text-base text-[#070708] dark:text-white placeholder-[#646a69]/60 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#001c55] dark:focus:ring-[#eae8ff]"
                     />
                   </div>
 
@@ -361,24 +313,19 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-bold rounded-lg bg-[#2f27ce] hover:bg-[#251ea8] dark:bg-[#443dff] dark:hover:bg-[#342de6] text-white shadow-md shadow-[#2f27ce]/20 hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    className="w-full studio-btn-primary text-base 2xl:text-lg py-4 rounded-2xl justify-center group cursor-pointer"
                   >
                     {isSubmitting ? (
-                      <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        <span>Submitting Inquiry...</span>
-                      </>
+                      <span>Sending Request...</span>
                     ) : (
                       <>
-                        <span>Start a Conversation</span>
-                        <Send className="w-4 h-4" />
+                        <span>Start Your Project</span>
+                        <div className="w-6 h-6 rounded-full bg-[#001c55] text-white flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </div>
                       </>
                     )}
                   </button>
-
-                  <p className="text-[11px] text-center text-[#050316]/50 dark:text-[#dddbff]/50 font-medium">
-                    We respect your privacy. Your information is strictly used to discuss your website project.
-                  </p>
                 </form>
               )}
             </div>

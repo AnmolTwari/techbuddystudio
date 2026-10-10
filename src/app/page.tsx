@@ -1,20 +1,12 @@
 import React from "react";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
+import { LogoMarquee } from "@/components/logo-marquee";
 import { ProblemSection } from "@/components/problem-section";
 import { ServicesSection } from "@/components/services-section";
-import { FeaturedWork } from "@/components/featured-work";
-import { WhyUs } from "@/components/why-us";
 import { ProcessSection } from "@/components/process-section";
-import { AboutSection } from "@/components/about-section";
-import { TechStack } from "@/components/tech-stack";
-import { TestimonialsPlaceholder } from "@/components/testimonials-placeholder";
-import { PricingCTA } from "@/components/pricing-cta";
-import { FAQSection } from "@/components/faq-section";
-import { ContactSection } from "@/components/contact-section";
 import { FinalCTA } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
-import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 
 export default function HomePage() {
   return (
@@ -23,51 +15,30 @@ export default function HomePage() {
       <Navbar />
 
       <main className="flex-1">
-        {/* 1. Hero Section */}
+        {/* 1. Hero Section with Studio Curved Gradient & Pill CTAs */}
         <Hero />
 
-        {/* 2. Problem Section */}
+        {/* 2. Logo / Stack Marquee (Underlapping curved hero) */}
+        <LogoMarquee />
+
+        {/* 3. Problem Section with Split 2-Column Header & Stat Cards */}
         <ProblemSection />
 
-        {/* 3. Services Section */}
+        {/* 4. Solutions Section with 4 Solid/Pastel Cards & Tabs */}
         <ServicesSection />
 
-        {/* 4. Featured Work (Selected Work) */}
-        <FeaturedWork />
-
-        {/* 5. Why TechBuddyStudio */}
-        <WhyUs />
-
-        {/* 6. Process (From idea to launch) */}
+        {/* 5. Process (Get Started with TechBuddyStudio 01-04) */}
         <ProcessSection />
 
-        {/* 7. About TechBuddyStudio */}
-        <AboutSection />
-
-        {/* 8. Tech Stack */}
-        <TechStack />
-
-        {/* 9. Quality Commitment & Authentic Client System */}
-        <TestimonialsPlaceholder />
-
-        {/* 10. Custom Quote CTA */}
-        <PricingCTA />
-
-        {/* 11. FAQ Section */}
-        <FAQSection />
-
-        {/* 12. Contact Section */}
-        <ContactSection />
-
-        {/* 13. Final CTA Banner */}
+        {/* 6. Final Discovery Call CTA Block */}
         <FinalCTA />
       </main>
 
       {/* Footer */}
       <Footer />
-
-      {/* Floating WhatsApp Action Button */}
-      <FloatingWhatsApp />
     </div>
   );
 }
+
+
+

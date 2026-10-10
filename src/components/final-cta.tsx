@@ -3,48 +3,50 @@
 import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { ArrowRight, MessageSquare, Sparkles } from "lucide-react";
+import { ArrowRight, MessageSquare } from "lucide-react";
 
 export function FinalCTA() {
   return (
-    <section className="py-20 sm:py-28 relative overflow-hidden studio-dot-pattern">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md border border-[#dddbff] dark:border-[#221a5a] bg-[#dddbff]/50 dark:bg-[#19134a] text-[#2f27ce] dark:text-[#dddbff] text-xs font-bold">
-          <Sparkles className="w-3.5 h-3.5 text-[#443dff]" />
-          <span>Ready to Grow Your Business?</span>
-        </div>
+    <section className="py-20 sm:py-28 2xl:py-32 relative overflow-hidden bg-white">
+      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Curved Deep Navy CTA Card */}
+        <div className="relative rounded-3xl bg-gradient-to-b from-[#000000] via-[#001238] to-[#001c55] border border-white/10 p-10 sm:p-16 lg:p-20 2xl:p-24 text-center text-white shadow-2xl overflow-hidden">
+          {/* Subtle Ambient Radial Lighting */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] 2xl:w-[800px] h-[350px] bg-[#5030cc]/25 blur-[140px] pointer-events-none" />
 
-        <div className="space-y-4 max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#050316] dark:text-[#fbfbfe] tracking-tight">
-            Ready to build your online presence?
-          </h2>
+          <div className="relative z-10 max-w-3xl 2xl:max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight text-white leading-[1.15] font-heading">
+              See how TechBuddyStudio works for your business.
+            </h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-[#050316]/75 dark:text-[#dddbff]/80 leading-relaxed font-normal">
-            Let&apos;s create a website that makes your business easier to discover, understand, and contact.
-          </p>
-        </div>
+            <p className="text-base sm:text-lg md:text-xl text-slate-200/90 leading-relaxed font-normal max-w-2xl mx-auto">
+              Book a call and we&apos;ll walk you through the solutions and architecture relevant to your setup.
+            </p>
 
-        {/* Dual Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          <Link
-            href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 text-base font-bold rounded-lg bg-[#2f27ce] hover:bg-[#251ea8] dark:bg-[#443dff] dark:hover:bg-[#342de6] text-white shadow-md shadow-[#2f27ce]/20 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
-          >
-            <span>Start Your Project</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+              <Link
+                href="/discovery-call"
+                className="studio-btn-primary w-full sm:w-auto text-base 2xl:text-lg py-4 px-8 2xl:px-10 group cursor-pointer"
+              >
+                <span>Book a discovery call</span>
+                <div className="w-6 h-6 rounded-full bg-[#001c55] text-white flex items-center justify-center group-hover:translate-x-1 transition-transform duration-200">
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </div>
+              </Link>
 
-          <a
-            href={siteConfig.contact.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-bold rounded-lg border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 transition-colors shadow-xs cursor-pointer"
-          >
-            <MessageSquare className="w-4 h-4" />
-            <span>Chat on WhatsApp</span>
-          </a>
+              <Link
+                href="/contact"
+                className="studio-btn-secondary w-full sm:w-auto text-base 2xl:text-lg py-4 px-7 2xl:px-9 cursor-pointer inline-flex items-center gap-2.5 group"
+              >
+                <span>Send Project Brief</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
