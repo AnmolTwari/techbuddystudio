@@ -5,7 +5,7 @@ import { siteConfig, SITE_URL } from "@/config/site";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PageHero } from "@/components/page-hero";
-import { FileText, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions | TechBuddyStudio",

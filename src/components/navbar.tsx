@@ -355,7 +355,7 @@ export function Navbar() {
               <Link
                 href="/discovery-call"
                 onClick={closeMenu}
-                className="w-full studio-btn-primary justify-center py-3.5"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#eae8ff] hover:bg-[#ded9ff] text-[#001c55] font-heading font-semibold text-sm py-3.5 px-6 rounded-full shadow-md transition-all duration-200"
               >
                 <span>Book Discovery Call</span>
                 <ArrowRight className="w-4 h-4" />
@@ -364,7 +364,7 @@ export function Navbar() {
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="w-full studio-btn-secondary justify-center py-3.5"
+                className="w-full inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border border-white/30 font-heading font-semibold text-sm py-3.5 px-6 rounded-full transition-all duration-200"
               >
                 <span>Contact Us</span>
               </Link>

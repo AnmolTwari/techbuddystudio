@@ -1,20 +1,16 @@
 import React from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ContactSection } from "@/components/contact-section";
 import { PageHero } from "@/components/page-hero";
 import { siteConfig } from "@/config/site";
 import { 
-  MessageSquare, 
   PhoneCall, 
   Clock, 
   ShieldCheck, 
   CheckCircle2, 
-  Sparkles, 
   Layers, 
-  Calendar,
   Mail,
   ArrowRight
 } from "lucide-react";
@@ -59,7 +55,7 @@ export default function DiscoveryCallPage() {
           subtitle="Map out your project requirements, explore custom booking or web architecture, get accurate cost estimates, and receive a clear delivery roadmap."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-16">
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 2xl:py-16 space-y-10 sm:space-y-12">
           
           {/* 3 Unified Professional Consultation Channels */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">

@@ -181,7 +181,7 @@ export function ContactSection() {
                   <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                     <Link
                       href="/discovery-call"
-                      className="studio-btn-primary text-xs 2xl:text-sm py-3 px-6"
+                      className="inline-flex items-center justify-center gap-2 bg-[#001c55] hover:bg-[#00287a] text-white font-heading font-semibold text-xs 2xl:text-sm py-3 px-6 rounded-full shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer"
                     >
                       <CalendarCheck className="w-4 h-4" />
                       <span>Book Discovery Call</span>
@@ -313,14 +313,14 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full studio-btn-primary text-base 2xl:text-lg py-4 rounded-2xl justify-center group cursor-pointer"
+                    className="w-full inline-flex items-center justify-center gap-3 bg-[#001c55] hover:bg-[#00287a] text-[#eae8ff] font-heading font-semibold text-base 2xl:text-lg py-4 rounded-2xl shadow-md hover:shadow-lg transition-all duration-200 group cursor-pointer"
                   >
                     {isSubmitting ? (
                       <span>Sending Request...</span>
                     ) : (
                       <>
                         <span>Start Your Project</span>
-                        <div className="w-6 h-6 rounded-full bg-[#001c55] text-white flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                        <div className="w-6 h-6 rounded-full bg-[#eae8ff] text-[#001c55] flex items-center justify-center group-hover:translate-x-1 transition-transform">
                           <ArrowRight className="w-3.5 h-3.5" />
                         </div>
                       </>

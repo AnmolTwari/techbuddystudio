@@ -1,15 +1,10 @@
 import React from "react";
-import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { FinalCTA } from "@/components/final-cta";
 import { 
   Clock, 
-  CheckCircle2, 
-  ArrowRight, 
-  ShieldCheck, 
-  Sparkles, 
-  Layers 
+  CheckCircle2
 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 
@@ -98,10 +93,10 @@ export default function ProcessPage() {
           subtitle="No black boxes or hidden surprises. You receive private staging links at every milestone so you always know the exact progress of your website."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-16 sm:py-20">
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
 
           {/* 4 Steps Detailed List */}
-          <div className="space-y-10 2xl:space-y-12">
+          <div className="space-y-8 2xl:space-y-10">
             {steps.map((step) => (
               <div
                 key={step.number}
@@ -156,9 +151,7 @@ export default function ProcessPage() {
         </div>
 
         {/* Discovery Call CTA */}
-        <div className="mt-20">
-          <FinalCTA />
-        </div>
+        <FinalCTA />
       </main>
 
       <Footer />

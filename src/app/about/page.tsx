@@ -7,14 +7,9 @@ import { FinalCTA } from "@/components/final-cta";
 import { siteConfig } from "@/config/site";
 import { 
   ShieldCheck, 
-  Sparkles, 
   Award, 
-  Code2, 
-  ExternalLink, 
   Check, 
-  X, 
-  CheckCircle2, 
-  Layers 
+  X 
 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 
@@ -65,7 +60,7 @@ export default function AboutPage() {
           subtitle="We combine bespoke design, modern web engineering, and direct conversion funnels to build websites that look world-class and deliver results."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-16 sm:py-20">
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
 
           {/* Studio Profile & Story */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center py-10 border-t border-slate-200">
@@ -135,14 +130,14 @@ export default function AboutPage() {
               <div className="pt-4 flex flex-wrap gap-4">
                 <Link
                   href="/work"
-                  className="studio-btn-primary text-sm py-3 px-6 inline-flex items-center gap-2"
+                  className="inline-flex items-center justify-center gap-2 bg-[#001c55] hover:bg-[#00287a] text-white font-heading font-semibold text-sm py-3 px-6 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
                 >
                   <span>Explore Live Platforms</span>
                 </Link>
 
                 <Link
                   href="/discovery-call"
-                  className="studio-btn-secondary text-sm py-3 px-6 text-[#001c55] border-slate-300 hover:bg-slate-100 inline-flex items-center gap-2"
+                  className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-slate-100 text-[#001c55] border border-slate-300 font-heading font-semibold text-sm py-3 px-6 rounded-full hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
                 >
                   <span>Book a Discovery Call</span>
                 </Link>
@@ -151,8 +146,8 @@ export default function AboutPage() {
           </div>
 
           {/* Comparison Matrix: Why Choose Us */}
-          <div className="mt-20 pt-16 border-t border-slate-200">
-            <div className="max-w-3xl mb-12 space-y-2">
+          <div className="mt-12 pt-10 border-t border-slate-200">
+            <div className="max-w-3xl mb-8 space-y-2">
               <span className="text-xs uppercase font-extrabold tracking-widest text-[#001c55]">
                 Why TechBuddyStudio
               </span>
@@ -202,7 +197,7 @@ export default function AboutPage() {
           </div>
 
           {/* Quality Commitment Container */}
-          <div className="mt-20 rounded-3xl bg-[#001c55] text-white p-10 sm:p-14 shadow-xl">
+          <div className="mt-12 rounded-3xl bg-[#001c55] text-white p-8 sm:p-12 shadow-xl">
             <div className="max-w-3xl space-y-6">
               <span className="text-xs uppercase font-extrabold tracking-widest text-[#eae8ff] inline-flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
@@ -236,9 +231,7 @@ export default function AboutPage() {
         </div>
 
         {/* Discovery Call CTA */}
-        <div className="mt-20">
-          <FinalCTA />
-        </div>
+        <FinalCTA />
       </main>
 
       <Footer />

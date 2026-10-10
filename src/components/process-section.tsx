@@ -7,10 +7,10 @@ import { ArrowRight } from "lucide-react";
 
 export function ProcessSection() {
   return (
-    <section id="process" className="py-20 sm:py-28 2xl:py-32 bg-white relative transition-colors duration-300">
+    <section id="process" className="py-12 sm:py-16 2xl:py-20 bg-white relative transition-colors duration-300">
       <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="mb-12 sm:mb-16">
+        <div className="mb-8 sm:mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#070708] font-heading">
             Get Started with TechBuddyStudio
           </h2>

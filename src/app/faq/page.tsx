@@ -28,15 +28,13 @@ export default function FAQPage() {
           subtitle="Everything you need to know about our web engineering workflow, payment milestones, code ownership, and ongoing support."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-16 sm:py-20">
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
           {/* Accordion Component */}
           <FAQSection />
         </div>
 
         {/* Discovery Call CTA */}
-        <div className="mt-20">
-          <FinalCTA />
-        </div>
+        <FinalCTA />
       </main>
 
       <Footer />

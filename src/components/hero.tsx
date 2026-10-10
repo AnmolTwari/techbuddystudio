@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[88vh] sm:min-h-[92vh] flex flex-col justify-center items-center text-center studio-hero-bg text-white overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32 2xl:pt-48 2xl:pb-40"
+      className="relative min-h-[72vh] sm:min-h-[76vh] lg:min-h-[80vh] flex flex-col justify-center items-center text-center bg-gradient-to-b from-[#02040a] via-[#001138] to-[#001c55] rounded-none text-white overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20 2xl:pt-40 2xl:pb-24"
     >
       {/* Subtle Ambient Radial Lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] 2xl:w-[1000px] h-[450px] bg-[#5030cc]/20 blur-[160px] rounded-full pointer-events-none" />
@@ -28,7 +28,7 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2 w-full sm:w-auto">
           <Link
             href="/discovery-call"
-            className="studio-btn-primary w-full sm:w-auto text-sm sm:text-base 2xl:text-lg py-3.5 sm:py-4 px-7 sm:px-8 2xl:px-10 group cursor-pointer shadow-lg"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#eae8ff] hover:bg-[#ded9ff] text-[#001c55] font-heading font-semibold text-sm sm:text-base 2xl:text-lg py-3.5 sm:py-4 px-7 sm:px-8 2xl:px-10 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 cursor-pointer w-full sm:w-auto group"
           >
             <span>Book a Discovery Call</span>
             <div className="w-6 h-6 rounded-full bg-[#001c55] text-white flex items-center justify-center group-hover:translate-x-1 transition-transform duration-200">
@@ -38,7 +38,7 @@ export function Hero() {
 
           <Link
             href="/work"
-            className="studio-btn-secondary w-full sm:w-auto text-sm sm:text-base 2xl:text-lg py-3.5 sm:py-4 px-6 sm:px-7 2xl:px-9 group cursor-pointer inline-flex items-center gap-2.5"
+            className="inline-flex items-center justify-center gap-2.5 bg-transparent hover:bg-white/10 text-white border border-white/40 hover:border-white/80 font-heading font-semibold text-sm sm:text-base 2xl:text-lg py-3.5 sm:py-4 px-6 sm:px-7 2xl:px-9 rounded-full hover:-translate-y-0.5 transition-all duration-200 cursor-pointer w-full sm:w-auto group"
           >
             <span>Explore Live Platforms</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />

@@ -36,8 +36,8 @@ export function LogoMarquee() {
   const marqueeItems = [...stackItems, ...stackItems];
 
   return (
-    <section className="relative py-14 sm:py-18 bg-[#f6fafe] border-y border-slate-200/80 overflow-hidden transition-colors duration-300">
-      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+    <section className="relative py-8 sm:py-10 bg-[#f6fafe] border-y border-slate-200/80 overflow-hidden transition-colors duration-300">
+      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mb-4 sm:mb-5 text-center">
         <h3 className="text-sm sm:text-base 2xl:text-lg font-bold text-[#070708] font-heading">
           Trusted by Modern Businesses, Resorts &amp; High-Growth Brands
         </h3>

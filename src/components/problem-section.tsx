@@ -26,10 +26,10 @@ export function ProblemSection() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 2xl:py-32 bg-white relative transition-colors duration-300">
+    <section className="py-12 sm:py-16 2xl:py-20 bg-white relative transition-colors duration-300">
       <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Split Two-Column Section Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start mb-10 sm:mb-12">
           <div className="lg:col-span-6 space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight text-[#070708] leading-[1.18] font-heading">
               The Only Web Studio <br className="hidden sm:inline" />
@@ -53,8 +53,11 @@ export function ProblemSection() {
           {statMetrics.map((stat, idx) => {
             const Icon = stat.icon;
             return (
-              <div key={idx} className="studio-stat-border">
-                <div className="studio-stat-card h-full justify-between space-y-4">
+              <div
+                key={idx}
+                className="p-2.5 rounded-[20px] border border-[#e4e5e7] dark:border-[#1a2347] bg-[#f6fafe]/60 dark:bg-[#0b1126]/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="h-full rounded-xl bg-white dark:bg-[#0b1126] p-7 2xl:p-8 flex flex-col justify-between space-y-4 shadow-xs">
                   <div className="flex items-start justify-between w-full">
                     <div>
                       <span className="text-4xl sm:text-5xl 2xl:text-6xl font-extrabold tracking-tight text-[#070708] font-heading block">

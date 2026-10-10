@@ -264,10 +264,10 @@ export function ServicesSection() {
   const currentCards = solutionsMap[activeTab] || solutionsMap.HOSPITALITY;
 
   return (
-    <section id="solutions" className="py-20 sm:py-28 2xl:py-32 bg-white relative transition-colors duration-300">
+    <section id="solutions" className="py-12 sm:py-16 2xl:py-20 bg-white relative transition-colors duration-300">
       <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
         {/* Solutions Overview Heading */}
-        <div className="max-w-4xl space-y-3 mb-12 sm:mb-16">
+        <div className="max-w-4xl space-y-3 mb-8 sm:mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight text-[#070708] font-heading">
             Every Step Covered from First Booking to Final Launch
           </h2>
@@ -277,7 +277,7 @@ export function ServicesSection() {
         </div>
 
         {/* "Solutions for:" Header & Pill Switcher */}
-        <div className="space-y-4 mb-10 sm:mb-12">
+        <div className="space-y-4 mb-7 sm:mb-8">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
             <span className="text-base sm:text-lg 2xl:text-xl font-bold text-[#070708] font-heading">
               Solutions for:

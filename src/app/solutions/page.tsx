@@ -284,10 +284,10 @@ export default function SolutionsPage() {
           subtitle="Whether you need direct hotel bookings, retail POS, startup web applications, or a high-converting corporate website, we have the exact architecture ready."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-16 sm:py-20">
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
 
           {/* Industry Sections */}
-          <div className="space-y-24">
+          <div className="space-y-14 sm:space-y-16">
             {industries.map((ind) => (
               <div key={ind.id} id={ind.id} className="pt-4 border-t border-slate-200">
                 <div className="mb-8 space-y-2">
@@ -365,9 +365,7 @@ export default function SolutionsPage() {
         </div>
 
         {/* Discovery Call CTA */}
-        <div className="mt-20">
-          <FinalCTA />
-        </div>
+        <FinalCTA />
       </main>
 
       <Footer />

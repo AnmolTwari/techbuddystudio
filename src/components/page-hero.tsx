@@ -10,7 +10,7 @@ interface PageHeroProps {
 
 export function PageHero({ badge, title, subtitle }: PageHeroProps) {
   return (
-    <section className="relative pt-36 sm:pt-44 lg:pt-48 pb-16 sm:pb-20 lg:pb-24 studio-hero-bg text-white overflow-hidden">
+    <section className="relative pt-28 sm:pt-32 lg:pt-36 pb-12 sm:pb-14 lg:pb-16 bg-gradient-to-b from-[#02040a] via-[#001138] to-[#001c55] rounded-b-[36px] sm:rounded-b-[48px] lg:rounded-b-[60px] text-white overflow-hidden">
       {/* Ambient Lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#5030cc]/20 blur-[130px] rounded-full pointer-events-none" />
 

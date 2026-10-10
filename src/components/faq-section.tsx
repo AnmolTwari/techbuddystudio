@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { faqsData } from "@/data/faqs";
 import { ChevronDown, HelpCircle, MessageSquare } from "lucide-react";
 import { siteConfig } from "@/config/site";
@@ -78,12 +79,12 @@ export function FAQSection() {
             </span>
           </div>
 
-          <a
+          <Link
             href="/discovery-call"
-            className="studio-btn-primary text-xs 2xl:text-sm py-3 px-5 2xl:px-6 flex-shrink-0 inline-flex items-center gap-2"
+            className="inline-flex items-center justify-center gap-2 bg-[#001c55] hover:bg-[#00287a] text-white font-heading font-semibold text-xs 2xl:text-sm py-3 px-5 2xl:px-6 rounded-full flex-shrink-0 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
           >
             <span>Book Discovery Call</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

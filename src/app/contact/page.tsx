@@ -30,10 +30,10 @@ export default function ContactPage() {
           subtitle="Have a project in mind, need a tailored estimate, or want to discuss direct booking infrastructure for your business? Connect directly with us."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-16 sm:py-20">
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
 
           {/* 3 Unified Professional Contact Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12">
             {/* Consultation Card */}
             <Link
               href="/discovery-call"

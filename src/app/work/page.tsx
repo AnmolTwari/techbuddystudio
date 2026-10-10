@@ -28,7 +28,7 @@ export default function WorkPage() {
           subtitle="A curated selection of production websites, booking platforms, and custom web applications built by TechBuddyStudio."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-16 sm:py-20">
+        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
 
           {/* Primary Featured Projects */}
           <div className="space-y-12 sm:space-y-16">
@@ -115,7 +115,7 @@ export default function WorkPage() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="studio-btn-primary text-sm 2xl:text-base py-3 px-6 cursor-pointer inline-flex items-center gap-2"
+                        className="inline-flex items-center justify-center gap-2 bg-[#001c55] hover:bg-[#00287a] text-white font-heading font-semibold text-sm 2xl:text-base py-3 px-6 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
                       >
                         <span>Launch Live Demo</span>
                         <ExternalLink className="w-4 h-4" />
