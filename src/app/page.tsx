@@ -5,6 +5,7 @@ import { LogoMarquee } from "@/components/logo-marquee";
 import { ProblemSection } from "@/components/problem-section";
 import { ServicesSection } from "@/components/services-section";
 import { ProcessSection } from "@/components/process-section";
+import { TestimonialsSection } from "@/components/testimonials-section";
 import { FinalCTA } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
 
@@ -30,7 +31,10 @@ export default function HomePage() {
         {/* 5. Process (Get Started with TechBuddyStudio 01-04) */}
         <ProcessSection />
 
-        {/* 6. Final Discovery Call CTA Block */}
+        {/* 6. Genuine Client & Collaborator Feedback */}
+        <TestimonialsSection />
+
+        {/* 7. Final Discovery Call CTA Block */}
         <FinalCTA />
       </main>
 

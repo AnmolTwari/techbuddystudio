@@ -51,18 +51,18 @@ export default function DiscoveryCallPage() {
         {/* Dark Curved Header */}
         <PageHero
           badge="1-on-1 Engineering Consultation"
-          title="Book Your Discovery Call"
+          title="Book a Discovery Call"
           subtitle="Map out your project requirements, explore custom booking or web architecture, get accurate cost estimates, and receive a clear delivery roadmap."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 2xl:py-16 space-y-10 sm:space-y-12">
+        <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12 py-10 sm:py-14 2xl:py-16 3xl:py-24 space-y-10 sm:space-y-12 3xl:space-y-16">
           
           {/* 3 Unified Professional Consultation Channels */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 3xl:gap-10 4xl:gap-12">
             {/* Strategy Call Session */}
             <a
               href="#contact"
-              className="p-8 2xl:p-9 rounded-3xl bg-[#f8f9fc] border border-slate-200 hover:border-[#001c55] shadow-xs hover:shadow-xl transition-all duration-300 group flex flex-col justify-between space-y-6"
+              className="p-8 2xl:p-9 3xl:p-12 rounded-3xl bg-[#f8f9fc] border border-slate-200 hover:border-[#001c55] shadow-xs hover:shadow-xl transition-all duration-300 group flex flex-col justify-between space-y-6"
             >
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#eae8ff] text-[#001c55] flex items-center justify-center group-hover:scale-105 transition-transform">

@@ -14,26 +14,26 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-24 sm:py-32 2xl:py-36 bg-white dark:bg-[#050711] relative transition-colors duration-300">
-      <div className="max-w-5xl 2xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-24 sm:py-32 2xl:py-36 3xl:py-44 bg-white dark:bg-[#050711] relative transition-colors duration-300">
+      <div className="max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl 4xl:max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
         {/* FAQ Header */}
-        <div className="text-center max-w-3xl 2xl:max-w-4xl mx-auto space-y-4 mb-16">
-          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#001c55]">
+        <div className="text-center max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl mx-auto space-y-4 mb-16 3xl:mb-20">
+          <span className="inline-flex items-center gap-2 text-xs 3xl:text-sm font-bold uppercase tracking-widest text-[#001c55]">
             <HelpCircle className="w-3.5 h-3.5 text-[#5030cc]" />
             Got Questions? We&apos;ve Got Answers
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight text-[#070708] leading-[1.15] font-heading">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl 3xl:text-7xl font-bold tracking-tight text-[#070708] leading-[1.15] font-heading">
             Frequently Asked Questions.
           </h2>
 
-          <p className="text-base sm:text-lg 2xl:text-xl text-[#646a69] leading-relaxed font-normal">
+          <p className="text-base sm:text-lg 2xl:text-xl 3xl:text-2xl text-[#646a69] leading-relaxed font-normal">
             Clear answers to common questions about working with TechBuddyStudio.
           </p>
         </div>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-4 2xl:space-y-5">
+        <div className="space-y-4 2xl:space-y-5 3xl:space-y-6">
           {faqsData.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
@@ -43,10 +43,10 @@ export function FAQSection() {
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full px-7 2xl:px-8 py-6 2xl:py-7 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
+                  className="w-full px-7 2xl:px-8 3xl:px-10 py-6 2xl:py-7 3xl:py-8 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg 2xl:text-xl font-bold text-[#070708] dark:text-white font-heading">
+                  <span className="text-base sm:text-lg 2xl:text-xl 3xl:text-2xl font-bold text-[#070708] dark:text-white font-heading">
                     {faq.question}
                   </span>
                   <div

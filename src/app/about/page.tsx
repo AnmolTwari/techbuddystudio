@@ -28,7 +28,7 @@ export default function AboutPage() {
     },
     {
       feature: "Mobile Speed & Google Lighthouse",
-      techBuddy: "98-100/100 score across all devices",
+      techBuddy: "Target 90+ score and sub-second load times",
       traditional: "Slow, bloated 40-60 performance scores",
     },
     {
@@ -60,7 +60,7 @@ export default function AboutPage() {
           subtitle="We combine bespoke design, modern web engineering, and direct conversion funnels to build websites that look world-class and deliver results."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
+        <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16 py-10 sm:py-14 2xl:py-16 3xl:py-24">
 
           {/* Studio Profile & Story */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center py-10 border-t border-slate-200">
@@ -82,7 +82,7 @@ export default function AboutPage() {
                     TechBuddyStudio
                   </h2>
                   <p className="text-xs uppercase tracking-wider font-extrabold text-[#001c55]">
-                    Full-Cycle Web &amp; Systems Studio
+                    Custom Web &amp; Business Solutions Studio
                   </p>
                   <p className="text-xs text-[#646a69]">
                     India &amp; Worldwide Client Delivery
@@ -132,7 +132,7 @@ export default function AboutPage() {
                   href="/work"
                   className="inline-flex items-center justify-center gap-2 bg-[#001c55] hover:bg-[#00287a] text-white font-heading font-semibold text-sm py-3 px-6 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
                 >
-                  <span>Explore Live Platforms</span>
+                  <span>Explore Live Showcases</span>
                 </Link>
 
                 <Link

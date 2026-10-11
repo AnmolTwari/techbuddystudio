@@ -235,7 +235,7 @@ export function ServicesSection() {
         title: "Redesign & Speed",
         tagline: "Modernize an outdated or slow website.",
         badgeTitle: "UI & Performance Overhaul",
-        badgeDesc: "Upgrade clunky templates to modern Next.js 16 with 99+ Lighthouse performance scores across mobile viewports.",
+        badgeDesc: "Upgrade clunky templates to modern Next.js with optimized Core Web Vitals and fast mobile load times.",
         bgColor: "bg-[#93cbf5]",
         textColor: "text-[#001c55]",
         innerBoxBg: "bg-[#001c55]",
@@ -264,22 +264,22 @@ export function ServicesSection() {
   const currentCards = solutionsMap[activeTab] || solutionsMap.HOSPITALITY;
 
   return (
-    <section id="solutions" className="py-12 sm:py-16 2xl:py-20 bg-white relative transition-colors duration-300">
-      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
+    <section id="solutions" className="py-12 sm:py-16 2xl:py-20 3xl:py-28 bg-white relative transition-colors duration-300">
+      <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16">
         {/* Solutions Overview Heading */}
-        <div className="max-w-4xl space-y-3 mb-8 sm:mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight text-[#070708] font-heading">
-            Every Step Covered from First Booking to Final Launch
+        <div className="max-w-4xl 3xl:max-w-6xl space-y-3 mb-8 sm:mb-10 3xl:mb-14">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl 3xl:text-7xl font-bold tracking-tight text-[#070708] font-heading">
+            Tailored Solutions for Your Industry
           </h2>
-          <p className="text-base sm:text-lg 2xl:text-xl text-[#646a69] font-normal leading-relaxed">
-            TechBuddyStudio&apos;s suite of solutions encompass the entire digital chain. Connect your services, engage your clients, and settle bookings, all on one platform.
+          <p className="text-base sm:text-lg 2xl:text-xl 3xl:text-2xl text-[#646a69] font-normal leading-relaxed">
+            Custom websites and digital platforms built for your specific workflow—from direct hotel bookings and retail POS systems to custom SaaS applications.
           </p>
         </div>
 
         {/* "Solutions for:" Header & Pill Switcher */}
-        <div className="space-y-4 mb-7 sm:mb-8">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-            <span className="text-base sm:text-lg 2xl:text-xl font-bold text-[#070708] font-heading">
+        <div className="space-y-4 mb-7 sm:mb-8 3xl:mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 3xl:gap-6">
+            <span className="text-base sm:text-lg 2xl:text-xl 3xl:text-2xl font-bold text-[#070708] font-heading">
               Solutions for:
             </span>
 
@@ -308,7 +308,7 @@ export function ServicesSection() {
         </div>
 
         {/* 4 Solid/Pastel Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 2xl:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 2xl:gap-8 3xl:gap-10 4xl:gap-12 items-stretch">
           {currentCards.map((card, idx) => {
             const Icon = card.icon;
             const isExternal = card.linkUrl.startsWith("http");
@@ -316,29 +316,29 @@ export function ServicesSection() {
             return (
               <div
                 key={idx}
-                className={`rounded-3xl ${card.bgColor} ${card.textColor} p-7 2xl:p-8 flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 min-h-[420px] 2xl:min-h-[460px]`}
+                className={`rounded-3xl ${card.bgColor} ${card.textColor} p-7 2xl:p-8 3xl:p-10 flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 min-h-[420px] 2xl:min-h-[460px] 3xl:min-h-[500px]`}
               >
                 {/* Card Top: Large Logo & Tagline */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 2xl:w-10 2xl:h-10 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 2xl:w-6 2xl:h-6" />
+                    <div className="w-9 h-9 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-5 h-5 2xl:w-6 2xl:h-6 3xl:w-7 3xl:h-7" />
                     </div>
-                    <h3 className="text-2xl 2xl:text-3xl font-extrabold tracking-tight font-heading">
+                    <h3 className="text-2xl 2xl:text-3xl 3xl:text-4xl font-extrabold tracking-tight font-heading">
                       {card.title}
                     </h3>
                   </div>
 
-                  <p className="text-sm 2xl:text-base opacity-95 font-medium leading-snug">
+                  <p className="text-sm 2xl:text-base 3xl:text-lg opacity-95 font-medium leading-snug">
                     {card.tagline}
                   </p>
 
                   {/* Inset Contrasting Box */}
-                  <div className={`rounded-2xl ${card.innerBoxBg} p-5 2xl:p-6 space-y-2 shadow-inner mt-4`}>
-                    <h4 className="text-sm 2xl:text-base font-bold text-white font-heading">
+                  <div className={`rounded-2xl ${card.innerBoxBg} p-5 2xl:p-6 3xl:p-7 space-y-2 shadow-inner mt-4`}>
+                    <h4 className="text-sm 2xl:text-base 3xl:text-lg font-bold text-white font-heading">
                       {card.badgeTitle}
                     </h4>
-                    <p className={`text-xs 2xl:text-sm ${card.innerBoxText} leading-relaxed font-normal`}>
+                    <p className={`text-xs 2xl:text-sm 3xl:text-base ${card.innerBoxText} leading-relaxed font-normal`}>
                       {card.badgeDesc}
                     </p>
                   </div>

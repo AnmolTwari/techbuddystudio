@@ -11,15 +11,15 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://techbuddyst
 export const siteConfig = {
   name: "TechBuddyStudio",
   legalName: "TechBuddyStudio",
-  tagline: "The Infrastructure Layer for Modern Business",
+  tagline: "Custom Web Development & Business Solutions",
   description:
-    "TechBuddyStudio designs and builds high-performance web platforms, direct booking engines, and custom digital applications for growing businesses and enterprises.",
+    "TechBuddyStudio builds high-performance custom websites and business applications, specializing in hospitality, retail, and SaaS solutions.",
   url: SITE_URL,
   studio: {
     name: "TechBuddyStudio Team",
-    role: "Full-Cycle Web & Systems Studio",
+    role: "Custom Web & Business Solutions Studio",
     location: "India & Worldwide",
-    experienceHighlight: "Modern Web Engineering & High-Performance Cloud Architecture",
+    experienceHighlight: "Full-Stack Web Engineering & High-Performance Architecture",
     portfolioUrl: "/work",
   },
   contact: {
@@ -49,6 +49,7 @@ export const siteConfig = {
     { name: "Solutions", href: "/solutions" },
     { name: "Services", href: "/services" },
     { name: "Work", href: "/work" },
+    { name: "Insights", href: "/insights" },
     { name: "Process", href: "/process" },
     { name: "About", href: "/about" },
     { name: "FAQ", href: "/faq" },

@@ -60,7 +60,7 @@ export default function ProcessPage() {
         "Production-grade Next.js frontend",
         "Direct booking & contact form integrations",
         "Cross-browser & multi-device testing (Mobile, iPad, 4K)",
-        "Lighthouse 99+ speed optimization",
+        "Core Web Vitals & speed optimization",
       ],
       duration: "Day 6 - 10",
     },
@@ -93,21 +93,21 @@ export default function ProcessPage() {
           subtitle="No black boxes or hidden surprises. You receive private staging links at every milestone so you always know the exact progress of your website."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
+        <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16 py-10 sm:py-14 2xl:py-16 3xl:py-24">
 
           {/* 4 Steps Detailed List */}
-          <div className="space-y-8 2xl:space-y-10">
+          <div className="space-y-8 2xl:space-y-10 3xl:space-y-14">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="p-8 sm:p-12 2xl:p-14 rounded-3xl bg-[#f8f9fc] border border-slate-200 hover:border-[#001c55] shadow-xs hover:shadow-lg transition-all duration-200 grid grid-cols-1 lg:grid-cols-12 gap-8 2xl:gap-12 items-start"
+                className="p-8 sm:p-12 2xl:p-14 3xl:p-16 rounded-3xl bg-[#f8f9fc] border border-slate-200 hover:border-[#001c55] shadow-xs hover:shadow-lg transition-all duration-200 grid grid-cols-1 lg:grid-cols-12 gap-8 2xl:gap-12 3xl:gap-16 items-start"
               >
                 {/* Number & Phase Header */}
                 <div className="lg:col-span-4 space-y-3">
-                  <span className="text-5xl sm:text-6xl 2xl:text-7xl font-extrabold font-heading text-[#001c55] block">
+                  <span className="text-5xl sm:text-6xl 2xl:text-7xl 3xl:text-8xl font-extrabold font-heading text-[#001c55] block">
                     {step.number}
                   </span>
-                  <span className="inline-block text-xs 2xl:text-sm uppercase font-extrabold tracking-wider px-3.5 py-1 rounded-full bg-[#eae8ff] text-[#001c55] border border-[#001c55]/10">
+                  <span className="inline-block text-xs 2xl:text-sm 3xl:text-base uppercase font-extrabold tracking-wider px-3.5 py-1 rounded-full bg-[#eae8ff] text-[#001c55] border border-[#001c55]/10">
                     {step.phase}
                   </span>
                   <div className="flex items-center gap-2 text-xs 2xl:text-sm font-semibold text-[#646a69] pt-1">

@@ -56,7 +56,7 @@ export function Navbar() {
         isScrolled ? "py-3 bg-[#00081a]/96" : "py-4 sm:py-4.5"
       }`}
     >
-      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
           <Link
@@ -64,28 +64,28 @@ export function Navbar() {
             className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#eae8ff] rounded-full"
             aria-label="TechBuddyStudio - Home"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-white/20 bg-[#0b1126] flex-shrink-0 p-1 group-hover:scale-105 transition-transform duration-200 shadow-sm">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 3xl:w-11 3xl:h-11 rounded-full overflow-hidden border border-white/20 bg-[#0b1126] flex-shrink-0 p-1 group-hover:scale-105 transition-transform duration-200 shadow-sm">
               <Image
                 src="/newlogo.png"
                 alt="TechBuddyStudio Official Logo"
                 fill
-                sizes="40px"
+                sizes="48px"
                 className="object-contain p-0.5"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg sm:text-xl tracking-tight text-white group-hover:text-[#eae8ff] transition-colors leading-tight font-heading">
+              <span className="font-bold text-lg sm:text-xl 3xl:text-2xl tracking-tight text-white group-hover:text-[#eae8ff] transition-colors leading-tight font-heading">
                 TechBuddy<span className="text-[#eae8ff] font-extrabold">Studio</span>
               </span>
-              <span className="text-[10px] uppercase font-semibold tracking-wider text-slate-300/80">
-                Web &amp; Digital Solutions
+              <span className="text-[10px] 3xl:text-[11px] uppercase font-semibold tracking-wider text-slate-300/80">
+                Custom Web &amp; Business Solutions
               </span>
             </div>
           </Link>
 
           {/* Centered Floating Pill Navigation */}
-          <nav className="hidden lg:flex items-center gap-2.5 2xl:gap-3.5">
+          <nav className="hidden lg:flex items-center gap-2.5 2xl:gap-3.5 3xl:gap-4.5">
             {/* About Pill */}
             <div
               className="relative"
@@ -94,7 +94,7 @@ export function Navbar() {
             >
               <Link
                 href="/about"
-                className="px-5 py-2.5 2xl:px-6 2xl:py-2.5 rounded-full text-sm 2xl:text-[15px] font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
+                className="px-5 py-2.5 2xl:px-6 2xl:py-2.5 3xl:px-7 3xl:py-3 rounded-full text-sm 2xl:text-[15px] 3xl:text-base font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
               >
                 <span>About</span>
                 <ChevronDown className="w-3.5 h-3.5 opacity-80" />
@@ -136,7 +136,7 @@ export function Navbar() {
             >
               <Link
                 href="/work"
-                className="px-5 py-2.5 2xl:px-6 2xl:py-2.5 rounded-full text-sm 2xl:text-[15px] font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
+                className="px-5 py-2.5 2xl:px-6 2xl:py-2.5 3xl:px-7 3xl:py-3 rounded-full text-sm 2xl:text-[15px] 3xl:text-base font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
               >
                 <span>Products</span>
                 <ChevronDown className="w-3.5 h-3.5 opacity-80" />
@@ -205,7 +205,7 @@ export function Navbar() {
             >
               <Link
                 href="/solutions"
-                className="px-5 py-2.5 2xl:px-6 2xl:py-2.5 rounded-full text-sm 2xl:text-[15px] font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
+                className="px-5 py-2.5 2xl:px-6 2xl:py-2.5 3xl:px-7 3xl:py-3 rounded-full text-sm 2xl:text-[15px] 3xl:text-base font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
               >
                 <span>Solutions</span>
                 <ChevronDown className="w-3.5 h-3.5 opacity-80" />
@@ -267,7 +267,7 @@ export function Navbar() {
             >
               <Link
                 href="/services"
-                className="px-5 py-2.5 2xl:px-6 2xl:py-2.5 rounded-full text-sm 2xl:text-[15px] font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
+                className="px-5 py-2.5 2xl:px-6 2xl:py-2.5 3xl:px-7 3xl:py-3 rounded-full text-sm 2xl:text-[15px] 3xl:text-base font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/25 transition-all flex items-center gap-2 cursor-pointer shadow-2xs"
               >
                 <span>Resources</span>
                 <ChevronDown className="w-3.5 h-3.5 opacity-80" />
@@ -287,6 +287,16 @@ export function Navbar() {
                       </div>
                     </Link>
                     <Link
+                      href="/insights"
+                      onClick={closeMenu}
+                      className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/10 transition-colors"
+                    >
+                      <div>
+                        <span className="text-xs font-bold text-white block">Technical Insights</span>
+                        <span className="text-[11px] text-slate-300 block">Architecture &amp; case studies</span>
+                      </div>
+                    </Link>
+                    <Link
                       href="/faq"
                       onClick={closeMenu}
                       className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/10 transition-colors"
@@ -303,11 +313,11 @@ export function Navbar() {
           </nav>
 
           {/* Right Action CTAs */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3 3xl:gap-4">
             {/* Contact Us Direct Link */}
             <Link
               href="/contact"
-              className="px-4.5 py-2.5 2xl:px-5 2xl:py-2.5 rounded-full text-sm 2xl:text-[15px] font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 transition-all inline-flex items-center gap-1.5"
+              className="px-4.5 py-2.5 2xl:px-5 2xl:py-2.5 3xl:px-6 3xl:py-3 rounded-full text-sm 2xl:text-[15px] 3xl:text-base font-semibold text-white/90 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 transition-all inline-flex items-center gap-1.5"
             >
               <span>Contact</span>
             </Link>
@@ -315,9 +325,9 @@ export function Navbar() {
             {/* Discovery Call Primary Button */}
             <Link
               href="/discovery-call"
-              className="px-6 py-2.5 2xl:px-7 2xl:py-2.5 rounded-full text-sm 2xl:text-[15px] font-bold text-[#001c55] bg-[#eae8ff] hover:bg-white transition-all shadow-md inline-flex items-center gap-2 cursor-pointer group"
+              className="px-6 py-2.5 2xl:px-7 2xl:py-2.5 3xl:px-8 3xl:py-3.5 rounded-full text-sm 2xl:text-[15px] 3xl:text-base font-bold text-[#001c55] bg-[#eae8ff] hover:bg-white transition-all shadow-md inline-flex items-center gap-2 cursor-pointer group"
             >
-              <span>Book Discovery Call</span>
+              <span>Book a Discovery Call</span>
               <ArrowRight className="w-4 h-4 text-[#001c55] group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -357,7 +367,7 @@ export function Navbar() {
                 onClick={closeMenu}
                 className="w-full inline-flex items-center justify-center gap-2 bg-[#eae8ff] hover:bg-[#ded9ff] text-[#001c55] font-heading font-semibold text-sm py-3.5 px-6 rounded-full shadow-md transition-all duration-200"
               >
-                <span>Book Discovery Call</span>
+                <span>Book a Discovery Call</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 

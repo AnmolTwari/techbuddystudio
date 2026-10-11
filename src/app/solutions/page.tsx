@@ -246,7 +246,7 @@ export default function SolutionsPage() {
           title: "Redesign & Speed",
           tagline: "Modernize an outdated or slow website.",
           badgeTitle: "UI & Performance Overhaul",
-          badgeDesc: "Upgrade clunky templates to modern Next.js 16 with 99+ Lighthouse performance scores across mobile viewports.",
+          badgeDesc: "Upgrade clunky templates to modern Next.js with optimized Core Web Vitals and fast mobile load times.",
           bgColor: "bg-[#93cbf5]",
           textColor: "text-[#001c55]",
           innerBoxBg: "bg-[#001c55]",
@@ -284,23 +284,23 @@ export default function SolutionsPage() {
           subtitle="Whether you need direct hotel bookings, retail POS, startup web applications, or a high-converting corporate website, we have the exact architecture ready."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
+        <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16 py-10 sm:py-14 2xl:py-16 3xl:py-24">
 
           {/* Industry Sections */}
-          <div className="space-y-14 sm:space-y-16">
+          <div className="space-y-14 sm:space-y-16 3xl:space-y-24">
             {industries.map((ind) => (
-              <div key={ind.id} id={ind.id} className="pt-4 border-t border-slate-200">
-                <div className="mb-8 space-y-2">
-                  <h2 className="text-2xl sm:text-3xl 2xl:text-4xl font-bold font-heading text-[#070708]">
+              <div key={ind.id} id={ind.id} className="pt-4 3xl:pt-8 border-t border-slate-200">
+                <div className="mb-8 3xl:mb-12 space-y-2">
+                  <h2 className="text-2xl sm:text-3xl 2xl:text-4xl 3xl:text-5xl font-bold font-heading text-[#070708]">
                     {ind.title}
                   </h2>
-                  <p className="text-sm sm:text-base 2xl:text-lg text-[#646a69]">
+                  <p className="text-sm sm:text-base 2xl:text-lg 3xl:text-xl text-[#646a69]">
                     {ind.subtitle} — {ind.description}
                   </p>
                 </div>
 
                 {/* 4 Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 2xl:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 2xl:gap-8 3xl:gap-10 4xl:gap-12">
                   {ind.cards.map((card, idx) => {
                     const Icon = card.icon;
                     const isExternal = card.linkUrl.startsWith("http");
@@ -308,14 +308,14 @@ export default function SolutionsPage() {
                     return (
                       <div
                         key={idx}
-                        className={`rounded-3xl ${card.bgColor} ${card.textColor} p-7 2xl:p-8 flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 min-h-[400px] 2xl:min-h-[440px]`}
+                        className={`rounded-3xl ${card.bgColor} ${card.textColor} p-7 2xl:p-8 3xl:p-10 flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 min-h-[400px] 2xl:min-h-[440px] 3xl:min-h-[480px]`}
                       >
                         <div className="space-y-4">
                           <div className="flex items-center gap-2.5">
-                            <div className="w-9 h-9 2xl:w-10 2xl:h-10 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
-                              <Icon className="w-5 h-5 2xl:w-6 2xl:h-6" />
+                            <div className="w-9 h-9 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                              <Icon className="w-5 h-5 2xl:w-6 2xl:h-6 3xl:w-7 3xl:h-7" />
                             </div>
-                            <h3 className="text-2xl 2xl:text-3xl font-extrabold tracking-tight font-heading">
+                            <h3 className="text-2xl 2xl:text-3xl 3xl:text-4xl font-extrabold tracking-tight font-heading">
                               {card.title}
                             </h3>
                           </div>

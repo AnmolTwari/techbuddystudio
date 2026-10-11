@@ -39,6 +39,7 @@ interface ServiceItem {
   icon: React.ElementType;
   demoUrl?: string;
   demoLabel?: string;
+  detailSlug?: string;
   accentColor: string;
   borderHover: string;
 }
@@ -125,16 +126,16 @@ export default function ServicesPage() {
     {
       id: "speed-redesign",
       category: "speed",
-      title: "Website Redesign & Lighthouse 99+ Optimization",
+      title: "Website Redesign & Speed Optimization",
       badge: "Performance Overhaul",
       tagline: "Modernize outdated or slow legacy websites into blazing-fast web applications.",
       description:
-        "Transform slow WordPress, Wix, or bloated template sites into ultra-fast Next.js applications that rank significantly higher on Google search results and reduce customer bounce rates.",
+        "Transform slow WordPress, Wix, or bloated template sites into fast Next.js applications that rank higher on Google search results and reduce customer bounce rates.",
       timeline: "1–2 Weeks",
       techStack: ["Next.js Turbopack", "Asset Optimization", "Global CDN", "Core Web Vitals"],
       deliverables: [
         "Complete visual & UX modernization without downtime",
-        "99+ Google Lighthouse score upgrade across mobile viewports",
+        "Target 90+ Lighthouse score and Core Web Vitals across mobile viewports",
         "Asset compression, WebP/AVIF images & edge caching",
         "Strict SEO preservation and legacy URL redirects",
       ],
@@ -201,7 +202,7 @@ export default function ServicesPage() {
     {
       feature: "Mobile Loading Speed",
       traditional: "3.5s – 6s+ (bloated plugins & uncompressed scripts)",
-      techbuddy: "Sub-second (< 0.8s), 99+ Google Lighthouse score",
+      techbuddy: "Sub-second (< 1.2s), target 90+ Lighthouse score",
     },
     {
       feature: "Code Ownership & Lock-in",
@@ -249,7 +250,7 @@ export default function ServicesPage() {
     },
     {
       step: "04",
-      title: "QA, Lighthouse 99+ Polish & Launch",
+      title: "QA, Performance Polish & Launch",
       duration: "Week 3–4",
       desc: "Rigorous cross-device testing, Core Web Vitals optimization, domain configuration, and seamless production handover.",
       deliverable: "Production Launch & Complete Code Repository Transfer",
@@ -269,55 +270,97 @@ export default function ServicesPage() {
         />
 
         {/* Studio Highlights Ribbon */}
-        <section className="border-b border-slate-200/80 bg-[#f8f9fc] py-6">
-          <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 2xl:gap-8 text-center md:text-left">
+        <section className="border-b border-slate-200/80 bg-[#f8f9fc] py-6 3xl:py-10">
+          <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 2xl:gap-8 3xl:gap-12 text-center md:text-left">
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <div className="w-8 h-8 rounded-lg bg-[#001c55]/10 text-[#001c55] flex items-center justify-center flex-shrink-0">
-                  <Cpu className="w-4 h-4" />
+                <div className="w-8 h-8 3xl:w-10 3xl:h-10 rounded-lg bg-[#001c55]/10 text-[#001c55] flex items-center justify-center flex-shrink-0">
+                  <Cpu className="w-4 h-4 3xl:w-5 3xl:h-5" />
                 </div>
                 <div>
-                  <div className="text-xs 2xl:text-sm font-bold text-[#070708]">Next.js 16 &amp; TypeScript</div>
-                  <div className="text-[11px] 2xl:text-xs text-[#646a69]">Modern Architecture</div>
+                  <div className="text-xs 2xl:text-sm 3xl:text-base font-bold text-[#070708]">Next.js 16 &amp; TypeScript</div>
+                  <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-[#646a69]">Modern Architecture</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <div className="w-8 h-8 rounded-lg bg-emerald-600/10 text-emerald-700 flex items-center justify-center flex-shrink-0">
-                  <Zap className="w-4 h-4" />
+                <div className="w-8 h-8 3xl:w-10 3xl:h-10 rounded-lg bg-emerald-600/10 text-emerald-700 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-4 h-4 3xl:w-5 3xl:h-5" />
                 </div>
                 <div>
-                  <div className="text-xs 2xl:text-sm font-bold text-[#070708]">99+ Lighthouse Speed</div>
-                  <div className="text-[11px] 2xl:text-xs text-[#646a69]">Sub-Second Performance</div>
+                  <div className="text-xs 2xl:text-sm 3xl:text-base font-bold text-[#070708]">Fast Edge Performance</div>
+                  <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-[#646a69]">Core Web Vitals Standard</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <div className="w-8 h-8 rounded-lg bg-[#5030cc]/10 text-[#5030cc] flex items-center justify-center flex-shrink-0">
-                  <ShieldCheck className="w-4 h-4" />
+                <div className="w-8 h-8 3xl:w-10 3xl:h-10 rounded-lg bg-[#5030cc]/10 text-[#5030cc] flex items-center justify-center flex-shrink-0">
+                  <ShieldCheck className="w-4 h-4 3xl:w-5 3xl:h-5" />
                 </div>
                 <div>
-                  <div className="text-xs 2xl:text-sm font-bold text-[#070708]">100% Code Ownership</div>
-                  <div className="text-[11px] 2xl:text-xs text-[#646a69]">Zero Lock-in Guarantee</div>
+                  <div className="text-xs 2xl:text-sm 3xl:text-base font-bold text-[#070708]">100% Code Ownership</div>
+                  <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-[#646a69]">Zero Lock-in Guarantee</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 justify-center md:justify-start">
-                <div className="w-8 h-8 rounded-lg bg-amber-600/10 text-amber-700 flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-4 h-4" />
+                <div className="w-8 h-8 3xl:w-10 3xl:h-10 rounded-lg bg-amber-600/10 text-amber-700 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 h-4 3xl:w-5 3xl:h-5" />
                 </div>
                 <div>
-                  <div className="text-xs 2xl:text-sm font-bold text-[#070708]">1–3 Week Delivery</div>
-                  <div className="text-[11px] 2xl:text-xs text-[#646a69]">Agile Sprint Cadence</div>
+                  <div className="text-xs 2xl:text-sm 3xl:text-base font-bold text-[#070708]">1–3 Week Delivery</div>
+                  <div className="text-[11px] 2xl:text-xs 3xl:text-sm text-[#646a69]">Agile Sprint Cadence</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
+        {/* Dedicated Service Pages Showcase */}
+        <section className="py-8 3xl:py-12 bg-white border-b border-slate-200">
+          <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 3xl:mb-6">
+              <div>
+                <span className="text-xs 3xl:text-sm font-bold uppercase tracking-wider text-[#001c55]">
+                  Dedicated Service Deep Dives
+                </span>
+                <p className="text-xs sm:text-sm 3xl:text-base text-[#646a69]">
+                  Explore detailed deliverables, workflows, and target fit for our core specializations.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 3xl:gap-5">
+              {[
+                { name: "Custom Web Dev", href: "/services/custom-web-development", desc: "Next.js & Bespoke Code" },
+                { name: "E-Commerce", href: "/services/ecommerce", desc: "Storefronts & POS Sync" },
+                { name: "SaaS & Web Apps", href: "/services/saas-applications", desc: "Dashboards & APIs" },
+                { name: "AI Integration", href: "/services/ai-integration", desc: "Parsing & Automation" },
+                { name: "Maintenance", href: "/services/maintenance", desc: "SLAs & Speed Retainers" },
+              ].map((item, idx) => (
+                <Link
+                  key={idx}
+                  href={item.href}
+                  className="p-3.5 3xl:p-5 rounded-2xl bg-[#f8f9fc] border border-slate-200 hover:border-[#001c55] shadow-2xs hover:shadow-xs transition-all flex flex-col justify-between group"
+                >
+                  <span className="text-xs sm:text-sm 3xl:text-base font-bold text-[#070708] group-hover:text-[#001c55] font-heading">
+                    {item.name}
+                  </span>
+                  <span className="text-[10px] 3xl:text-xs text-[#646a69] block mt-0.5">
+                    {item.desc}
+                  </span>
+                  <span className="text-[11px] 3xl:text-xs font-bold text-[#001c55] inline-flex items-center gap-1 mt-2">
+                    <span>Explore</span>
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Interactive Category Filter & Services Bento Grid */}
-        <section className="py-10 sm:py-14 2xl:py-16">
-          <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
+        <section className="py-10 sm:py-14 2xl:py-16 3xl:py-24">
+          <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16">
             {/* Header & Filter Controls */}
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 sm:mb-10">
               <div className="max-w-2xl space-y-3">
@@ -452,17 +495,17 @@ export default function ServicesPage() {
         </section>
 
         {/* Comparison Matrix Section: Traditional Agencies vs TechBuddyStudio */}
-        <section className="py-12 sm:py-16 bg-[#f8f9fc] border-y border-slate-200/80">
-          <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
-            <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#eae8ff] text-[#001c55] text-xs 2xl:text-sm font-bold">
+        <section className="py-12 sm:py-16 3xl:py-24 bg-[#f8f9fc] border-y border-slate-200/80">
+          <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16">
+            <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-10 3xl:mb-16 space-y-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#eae8ff] text-[#001c55] text-xs 2xl:text-sm 3xl:text-base font-bold">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#5030cc]" />
                 <span>The Studio Advantage</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl font-bold font-heading text-[#070708] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-bold font-heading text-[#070708] tracking-tight">
                 Why Industry Leaders Choose TechBuddyStudio
               </h2>
-              <p className="text-sm sm:text-base 2xl:text-lg text-[#646a69]">
+              <p className="text-sm sm:text-base 2xl:text-lg 3xl:text-xl text-[#646a69]">
                 Compare the difference between traditional agency template bloat and modern high-performance web engineering.
               </p>
             </div>
@@ -472,22 +515,22 @@ export default function ServicesPage() {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50/70">
-                    <th className="py-4 px-6 text-sm 2xl:text-base font-bold text-[#070708] w-1/4">Evaluation Metric</th>
-                    <th className="py-4 px-6 text-sm 2xl:text-base font-bold text-rose-800/80 w-3/8">Traditional Agencies / Templates</th>
-                    <th className="py-4 px-6 text-sm 2xl:text-base font-bold text-[#001c55] bg-[#001c55]/5 w-3/8">TechBuddyStudio Engineering</th>
+                    <th className="py-4 3xl:py-6 px-6 3xl:px-8 text-sm 2xl:text-base 3xl:text-lg font-bold text-[#070708] w-1/4">Evaluation Metric</th>
+                    <th className="py-4 3xl:py-6 px-6 3xl:px-8 text-sm 2xl:text-base 3xl:text-lg font-bold text-rose-800/80 w-3/8">Traditional Agencies / Templates</th>
+                    <th className="py-4 3xl:py-6 px-6 3xl:px-8 text-sm 2xl:text-base 3xl:text-lg font-bold text-[#001c55] bg-[#001c55]/5 w-3/8">TechBuddyStudio Engineering</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100 text-xs sm:text-sm 2xl:text-base">
+                <tbody className="divide-y divide-slate-100 text-xs sm:text-sm 2xl:text-base 3xl:text-lg">
                   {comparisonData.map((row, idx) => (
                     <tr key={idx} className="hover:bg-slate-50/50 transition-colors">
-                      <td className="py-4 px-6 font-bold text-[#070708]">{row.feature}</td>
-                      <td className="py-4 px-6 text-[#646a69]">
+                      <td className="py-4 3xl:py-5 px-6 3xl:px-8 font-bold text-[#070708]">{row.feature}</td>
+                      <td className="py-4 3xl:py-5 px-6 3xl:px-8 text-[#646a69]">
                         <div className="flex items-start gap-2">
                           <X className="w-4 h-4 text-rose-500 flex-shrink-0 mt-0.5" />
                           <span>{row.traditional}</span>
                         </div>
                       </td>
-                      <td className="py-4 px-6 text-[#001c55] font-semibold bg-[#001c55]/[0.02]">
+                      <td className="py-4 3xl:py-5 px-6 3xl:px-8 text-[#001c55] font-semibold bg-[#001c55]/[0.02]">
                         <div className="flex items-start gap-2">
                           <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
                           <span>{row.techbuddy}</span>
@@ -502,23 +545,23 @@ export default function ServicesPage() {
         </section>
 
         {/* 4-Step Engineering Delivery Process */}
-        <section className="py-12 sm:py-16 2xl:py-20">
-          <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
-            <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#eae8ff] text-[#001c55] text-xs 2xl:text-sm font-bold">
+        <section className="py-12 sm:py-16 2xl:py-20 3xl:py-28">
+          <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16">
+            <div className="text-center max-w-3xl 3xl:max-w-5xl mx-auto mb-10 3xl:mb-16 space-y-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#eae8ff] text-[#001c55] text-xs 2xl:text-sm 3xl:text-base font-bold">
                 <Layers className="w-3.5 h-3.5 text-[#5030cc]" />
                 <span>Transparent Delivery Cadence</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl font-bold font-heading text-[#070708] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-bold font-heading text-[#070708] tracking-tight">
                 From First Discovery to Production Launch
               </h2>
-              <p className="text-sm sm:text-base 2xl:text-lg text-[#646a69]">
+              <p className="text-sm sm:text-base 2xl:text-lg 3xl:text-xl text-[#646a69]">
                 Every project is executed in predictable, transparent milestones with continuous staging visibility.
               </p>
             </div>
 
             {/* Process Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 2xl:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 2xl:gap-8 3xl:gap-10 items-stretch">
               {deliverySteps.map((step, idx) => (
                 <div
                   key={idx}

@@ -30,10 +30,10 @@ export default function ContactPage() {
           subtitle="Have a project in mind, need a tailored estimate, or want to discuss direct booking infrastructure for your business? Connect directly with us."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
+        <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16 py-10 sm:py-14 2xl:py-16 3xl:py-24">
 
           {/* 3 Unified Professional Contact Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 3xl:gap-10 4xl:gap-12 mb-10 sm:mb-12 3xl:mb-16">
             {/* Consultation Card */}
             <Link
               href="/discovery-call"
@@ -48,7 +48,7 @@ export default function ContactPage() {
                     Live Consultation
                   </span>
                   <h3 className="text-xl 2xl:text-2xl font-bold font-heading text-[#070708] group-hover:text-[#001c55] transition-colors">
-                    Book Discovery Call
+                    Book a Discovery Call
                   </h3>
                   <p className="text-xs 2xl:text-sm text-[#646a69] leading-relaxed">
                     Schedule a focused 1-on-1 strategy call with lead engineers to map your features, timeline, and quote.

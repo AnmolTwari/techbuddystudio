@@ -13,28 +13,28 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#000a1f] text-slate-300 pt-20 2xl:pt-24 pb-12 border-t border-white/10 transition-colors duration-300">
-      <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-10 2xl:gap-14 pb-16 border-b border-white/10">
+    <footer className="bg-[#000a1f] text-slate-300 pt-20 2xl:pt-24 3xl:pt-32 pb-12 3xl:pb-16 border-t border-white/10 transition-colors duration-300">
+      <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 3xl:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-10 2xl:gap-14 3xl:gap-18 pb-16 3xl:pb-20 border-b border-white/10">
           {/* Brand Info & Studio Tagline */}
           <div className="lg:col-span-4 space-y-5">
             <Link href="/" className="flex items-center gap-3 inline-flex group">
-              <div className="relative w-10 h-10 2xl:w-12 2xl:h-12 rounded-full overflow-hidden border border-white/20 bg-[#001238] flex-shrink-0 p-1 group-hover:scale-105 transition-transform">
+              <div className="relative w-10 h-10 2xl:w-12 2xl:h-12 3xl:w-14 3xl:h-14 rounded-full overflow-hidden border border-white/20 bg-[#001238] flex-shrink-0 p-1 group-hover:scale-105 transition-transform">
                 <Image
                   src="/newlogo.png"
                   alt="TechBuddyStudio Official Logo"
                   fill
-                  sizes="48px"
+                  sizes="56px"
                   className="object-contain p-0.5"
                 />
               </div>
-              <span className="font-bold text-xl 2xl:text-2xl text-white tracking-tight font-heading">
+              <span className="font-bold text-xl 2xl:text-2xl 3xl:text-3xl text-white tracking-tight font-heading">
                 TechBuddy<span className="text-[#eae8ff]">Studio</span>
               </span>
             </Link>
 
-            <p className="text-sm 2xl:text-base text-slate-400 max-w-sm leading-relaxed font-normal">
-              TechBuddyStudio provides bespoke digital engineering, with custom design, performance optimization, and conversion built into one platform.
+            <p className="text-sm 2xl:text-base 3xl:text-lg text-slate-400 max-w-sm 3xl:max-w-md leading-relaxed font-normal">
+              High-performance custom web development and tailored digital solutions, specializing in hospitality, retail, and SaaS platforms.
             </p>
 
             {/* Social Icons (Pill Buttons) */}
@@ -92,7 +92,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/discovery-call" className="text-slate-400 hover:text-white transition-colors font-semibold text-[#eae8ff]">
-                  Book Discovery Call
+                  Book a Discovery Call
                 </Link>
               </li>
               <li>
@@ -170,6 +170,11 @@ export function Footer() {
               <li>
                 <Link href="/services" className="text-slate-400 hover:text-white transition-colors">
                   Engineering Scope
+                </Link>
+              </li>
+              <li>
+                <Link href="/insights" className="text-slate-400 hover:text-white transition-colors">
+                  Technical Insights
                 </Link>
               </li>
               <li>

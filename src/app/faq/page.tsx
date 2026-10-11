@@ -28,7 +28,7 @@ export default function FAQPage() {
           subtitle="Everything you need to know about our web engineering workflow, payment milestones, code ownership, and ongoing support."
         />
 
-        <div className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 py-10 sm:py-14 2xl:py-16">
+        <div className="max-w-7xl 2xl:max-w-[1400px] 3xl:max-w-[1720px] 4xl:max-w-[2100px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 3xl:px-16 py-10 sm:py-14 2xl:py-16 3xl:py-24">
           {/* Accordion Component */}
           <FAQSection />
         </div>

@@ -28,8 +28,8 @@ export function LogoMarquee() {
     { name: "Stripe & Payments", category: "Billing Engine", icon: CreditCard },
     { name: "Hospitality & Travel", category: "Industry Solutions", icon: Building2 },
     { name: "SaaS & B2B Portals", category: "Enterprise Web", icon: Layers },
-    { name: "Speed & SEO 100%", category: "Performance Standard", icon: Rocket },
-    { name: "SOC-2 Architecture", category: "Security", icon: ShieldCheck },
+    { name: "Core Web Vitals", category: "Speed Optimization", icon: Rocket },
+    { name: "Secure Architecture", category: "Security Best Practices", icon: ShieldCheck },
   ];
 
   // Double the list for seamless looping marquee

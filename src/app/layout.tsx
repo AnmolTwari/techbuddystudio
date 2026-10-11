@@ -20,11 +20,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "TechBuddyStudio | The Infrastructure Layer for Modern Business",
+    default: "TechBuddyStudio | Custom Web Development & Business Solutions",
     template: "%s | TechBuddyStudio",
   },
   description:
-    "TechBuddyStudio designs and builds high-performance web platforms, direct booking engines, and custom digital applications for growing businesses and enterprises.",
+    "TechBuddyStudio builds high-performance custom websites and business applications, specializing in hospitality, retail, and SaaS solutions.",
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: "TechBuddyStudio | The Infrastructure Layer for Modern Business",
+    title: "TechBuddyStudio | Custom Web Development & Business Solutions",
     description:
-      "One platform for custom design, engineering, and conversion. High-performance web applications and booking infrastructure.",
+      "High-performance custom web development and tailored business applications. Specialized in hospitality, retail, and SaaS.",
     siteName: siteConfig.name,
     images: [
       {
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TechBuddyStudio | The Infrastructure Layer for Modern Business",
+    title: "TechBuddyStudio | Custom Web Development & Business Solutions",
     description:
-      "One platform for custom design, engineering, and conversion. High-performance web applications and booking infrastructure.",
+      "High-performance custom web development and tailored business applications. Specialized in hospitality, retail, and SaaS.",
     images: ["/newlogo.png"],
   },
   robots: {

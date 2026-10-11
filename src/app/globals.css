@@ -34,6 +34,10 @@
   --color-studio-rose: #ffc6e5;
   --color-studio-text-main: #070708;
   --color-studio-text-muted: #646a69;
+
+  /* Ultrawide & Large Screen Breakpoints */
+  --breakpoint-3xl: 120rem; /* 1920px (Full HD & 1080p large monitor) */
+  --breakpoint-4xl: 160rem; /* 2560px (2K / QHD / Ultrawide / 4K) */
 }
 
 @layer base {
