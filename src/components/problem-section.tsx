@@ -52,7 +52,7 @@ export function ProblemSection() {
             return (
               <div
                 key={idx}
-                className="p-2.5 rounded-[20px] 3xl:rounded-[28px] border border-[#e4e5e7] dark:border-[#1a2347] bg-[#f6fafe]/60 dark:bg-[#0b1126]/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                className="p-2.5 rounded-[20px] 3xl:rounded-[28px] border border-[#e4e5e7] dark:border-[#1a2347] bg-[#f6fafe]/60 dark:bg-[#0b1126]/40"
               >
                 <div className="h-full rounded-xl 3xl:rounded-2xl bg-white dark:bg-[#0b1126] p-7 2xl:p-8 3xl:p-10 flex flex-col justify-between space-y-4 shadow-xs">
                   <div className="flex items-start justify-between w-full">
